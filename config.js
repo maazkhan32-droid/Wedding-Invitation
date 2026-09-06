@@ -2,7 +2,7 @@
 window.WEDDING_CONFIG = {
   customerSlug: "maaz-khan-khatija-quraishi",
   groom: { name: "Maaz Khan", father: "Sajid Khan" },
-  bride: { name: "Khatija Quraishi", father: "Hanif Quraishi" },
+  bride: { name: "Khatija Quraishi", father: "Haneef Quraishi" },
   initials: { groom: "M", bride: "K" },
   familySurname: "Khan",
   nikah: { date: "2026-11-01", countdownDateTime: "2026-11-01T17:00:00+05:30", time: "After Namaz-e-Asar", venue: "Jama Masjid", address: "Buddi Lane, Aurangabad, Maharashtra, 431001", map: "https://maps.app.goo.gl/GSrPN58Rn4TR9QVG7" },
