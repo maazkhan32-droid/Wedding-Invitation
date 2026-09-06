@@ -1,0 +1,1861 @@
+:root{--welcome-bg:url("assets/welcome-background.jpg");--invitation-bg:url("assets/invitation-background.png");}
+:root{--gold:#d7b15a;--gold-hi:#f4df9b;--green:#173d2c;--green-deep:#0d251b;--ivory:#f8f0e2;--ink:#1d261f;--serif:'Cormorant Garamond',Georgia,serif;--display:'Cinzel',Georgia,serif;--script:'Great Vibes',cursive}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:#0b0d0b}body{margin:0;overflow-x:hidden;background:#0b0d0b;color:var(--ivory);font-family:var(--serif)}button,a{font:inherit}button{cursor:pointer}
+/* LOADING */
+.preloader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:radial-gradient(circle at 50% 44%,#173426 0,#0b1812 38%,#050806 100%);transition:opacity .95s cubic-bezier(.22,1,.36,1),visibility .95s;overflow:hidden}.preloader.done{opacity:0;visibility:hidden;pointer-events:none}.loader-aura{position:absolute;width:min(70vw,560px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(221,185,92,.18),transparent 68%);filter:blur(12px);animation:aura 2.5s ease-in-out infinite}.initials-loader{display:flex;align-items:center;gap:18px;position:relative;z-index:1}.initial-orb{width:82px;height:82px;border:1px solid rgba(238,211,133,.7);border-radius:50%;display:grid;place-items:center;position:relative;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.025));box-shadow:inset 0 1px 12px rgba(255,255,255,.1),0 0 40px rgba(212,171,72,.16);animation:orbIn 1s cubic-bezier(.22,1,.36,1) both}.initial-orb:nth-child(3){animation-delay:.16s}.initial-orb span{font:500 38px var(--display);color:#f2da91;text-shadow:0 0 18px rgba(241,217,138,.4)}.initial-orb i{position:absolute;inset:-7px;border:1px solid rgba(241,217,138,.18);border-radius:50%;border-top-color:rgba(241,217,138,.9);animation:spin 2s linear infinite}.initial-amp{font:italic 30px var(--serif);color:#dfc176;animation:fadeUp 1s .25s both}.loader-caption{position:absolute;top:calc(50% + 84px);font:500 9px var(--display);letter-spacing:.38em;color:rgba(248,241,230,.6);animation:fadeUp 1s .35s both}.loader-line{position:absolute;bottom:18%;width:130px;height:1px;background:rgba(255,255,255,.13);overflow:hidden}.loader-line span{display:block;width:40%;height:100%;background:linear-gradient(90deg,transparent,#e7c86e,transparent);animation:loadline 1.5s ease-in-out infinite}
+/* FIRST PAGE */
+.welcome{height:100svh;min-height:620px;position:relative;overflow:hidden;isolation:isolate;background:#173c2b;color:#f5ead7}.first-page-art{position:absolute;inset:0;z-index:-4;background:url('assets/Weddingcardbackground-green.jpg') center center/cover no-repeat}.first-page-shade{position:absolute;inset:0;z-index:-3;background:linear-gradient(180deg,rgba(4,17,11,.34),rgba(10,32,22,.04) 45%,rgba(4,15,10,.48))}.green-glow{position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 50% 40%,rgba(244,219,153,.18),transparent 34%),linear-gradient(90deg,rgba(0,0,0,.17),transparent 23%,transparent 77%,rgba(0,0,0,.2));pointer-events:none}.golden-dust{position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(circle,rgba(239,211,133,.55) 0 1px,transparent 1.5px);background-size:88px 88px;opacity:.16;animation:dust 16s linear infinite}.welcome-copy{position:absolute;top:28%;left:50%;transform:translateX(-50%);width:min(570px,72vw);text-align:center;z-index:5;text-shadow:0 3px 22px rgba(0,0,0,.4)}.eyebrow{font:600 clamp(11px,1.15vw,14px) var(--display);letter-spacing:.34em;color:#f0d48b}.welcome-rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px auto 12px;color:#e6c66f}.welcome-rule span{width:70px;height:1px;background:linear-gradient(90deg,transparent,#e4c16b)}.welcome-rule span:last-child{transform:scaleX(-1)}.welcome-rule b{font-size:10px}.welcome h1{margin:0;display:flex;flex-direction:column;gap:0;font:500 clamp(43px,5.5vw,74px)/.9 var(--script);color:#fff5df}.welcome h1 em{font:400 clamp(22px,2.5vw,32px) var(--serif);color:#e2bf67;margin:-2px 0}.welcome-date{margin-top:15px;font:600 clamp(10px,1.2vw,14px) var(--display);letter-spacing:.25em;color:#f1d38b}.nikah-countdown-label{margin-top:17px;font:600 8px var(--display);letter-spacing:.25em;color:#e7c977}.first-countdown{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:6px}.first-countdown div{display:flex;flex-direction:column;min-width:52px}.first-countdown strong{font:600 20px var(--display);color:#fff1c8}.first-countdown small{font:600 6px var(--display);letter-spacing:.15em;color:#d9bc70}.first-countdown>b{font:500 13px var(--serif);color:#e0c071}.first-note{margin:10px 0 0;font:500 13px var(--serif);color:#f1e2c5}.lantern-rig{position:absolute;left:50%;top:0;width:180px;height:62%;transform:translateX(-50%);z-index:8;touch-action:none;user-select:none}.ceiling-mount{position:absolute;top:0;left:50%;transform:translateX(-50%);width:32px;height:18px;border-radius:0 0 9px 9px;background:linear-gradient(90deg,#76591f,#e7c971,#76591f);box-shadow:0 2px 12px rgba(0,0,0,.35),0 0 15px rgba(231,201,113,.3)}.ceiling-mount span{position:absolute;left:50%;top:13px;width:8px;height:8px;transform:translateX(-50%);border-radius:50%;background:#3d2b13;border:1px solid #e6c875}.hanger{position:absolute;left:50%;top:18px;width:0;height:0;transform-origin:top center}.rope{position:absolute;left:0;top:0;width:4px;height:118px;transform:translateX(-50%);border-radius:99px;background:linear-gradient(90deg,#6f511d,#f1d37a 46%,#8d6a26);box-shadow:0 0 5px rgba(244,211,122,.85),0 0 16px rgba(239,199,87,.28);transition:box-shadow .2s}.lantern-hit{position:absolute;left:0;top:118px;transform:translateX(-50%);width:150px;height:150px;display:grid;place-items:center;cursor:grab}.lantern-hit:active{cursor:grabbing}.lantern-float{position:relative;width:112px;height:130px;display:grid;place-items:center;filter:drop-shadow(0 18px 18px rgba(0,0,0,.32))}.lantern-glow{position:absolute;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle,rgba(255,221,120,.7),rgba(255,183,45,.16) 38%,transparent 70%);filter:blur(8px);animation:lanternPulse 2.2s ease-in-out infinite}.lantern-svg{position:relative;width:112px;height:130px;object-fit:contain}.lantern-rig.dragging .rope{box-shadow:0 0 7px rgba(255,222,127,1),0 0 25px rgba(239,199,87,.48)}.couple-corner{position:absolute;right:-2%;bottom:-1%;width:min(430px,35vw);height:52%;z-index:4;pointer-events:none;filter:drop-shadow(0 24px 18px rgba(0,0,0,.3))}.couple-corner img{width:100%;height:100%;object-fit:contain;object-position:right bottom}.pull-prompt{position:absolute;left:50%;bottom:4.5%;transform:translateX(-50%);z-index:9;display:flex;align-items:center;gap:10px;padding:9px 16px;border:1px solid rgba(235,207,130,.45);border-radius:999px;background:rgba(7,26,18,.36);backdrop-filter:blur(10px);color:#f1d796;font:600 8px var(--display);letter-spacing:.16em;box-shadow:0 10px 25px rgba(0,0,0,.18);pointer-events:none}.pull-prompt i{font-style:normal;font-size:14px;animation:promptBob 1.6s ease-in-out infinite}.welcome.opening .pull-prompt{opacity:0;transition:opacity .3s}.welcome.opened{animation:welcomeOut 1.15s cubic-bezier(.22,1,.36,1) forwards;pointer-events:none}
+/* MAIN INVITATION */
+#invitation{position:relative;height:100svh;min-height:100svh;background:#eee7dc;color:#453a2d;overflow:hidden;isolation:isolate}.invitation-fixed-bg{position:absolute;inset:0;z-index:0;background-color:#eee7dc;background-image:url('assets/backgroundwithcouple.jpg');background-repeat:no-repeat;background-position:center top;background-size:auto 100%}.invitation-tint{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.03));pointer-events:none}.invitation-plane-top,.invitation-plane-bottom{position:absolute;z-index:5;left:50%;width:min(72.8%,675px);transform:translateX(-50%);pointer-events:none}.invitation-plane-top{top:17.75%;height:2px;background:transparent}.invitation-plane-bottom{top:65.55%;height:2px;background:transparent}.invitation-scroll{position:absolute;z-index:3;top:17.75%;bottom:34.45%;left:50%;width:min(72.8%,675px);transform:translateX(-50%);overflow-y:auto;overflow-x:hidden;min-height:0;padding:22px 12.5% 70px;scrollbar-width:none;-ms-overflow-style:none;mask-image:linear-gradient(to bottom,transparent 0,black 5%,black 92%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0,black 5%,black 92%,transparent 100%)}.invitation-scroll::-webkit-scrollbar{display:none}.intro-section{min-height:100%;display:block;padding:18px 0 80px}.intro-inner,.section-content,.events-inner,.countdown-box,.closing-card{width:100%;max-width:500px;margin:0 auto;text-align:center}.intro-inner{color:#42382e}.bismillah{font:400 clamp(25px,3.2vw,38px) 'Amiri',serif;color:#5d4d3c;white-space:nowrap}.arabic-rule{font:24px serif;color:#b99b70;margin:6px 0}.mini-label{font:600 7px var(--display);letter-spacing:.2em;color:#8d7658;line-height:1.5}.blessing{font:italic 23px var(--serif);margin:14px 0 4px;color:#665442}.invite-line{font-size:16px;margin:0 auto 13px;line-height:1.35}.gold-names{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;font:400 clamp(33px,4vw,49px) var(--script);color:#78592a;line-height:.95}.gold-names i{font:italic 22px var(--serif);color:#ae884b}.date-line{margin-top:16px;font:600 10px var(--display);letter-spacing:.25em;color:#715b40}.couple-section,.events,.countdown-section,.closing-section{display:flex;justify-content:center;padding:90px 0}.section-content,.events-inner,.countdown-box,.closing-card{color:#453a2d}.section-label{font:600 8px var(--display);letter-spacing:.28em;color:#967b59}.section-content h2,.section-title,.closing-card h2{font:500 clamp(35px,4vw,52px)/1 var(--script);color:#6b5130;margin:11px 0}.section-content p,.closing-card>p{font-size:17px;color:#665a4d;margin:0 auto;max-width:400px}.event-card{position:relative;margin:30px auto 90px;width:min(500px,100%);border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.68);background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(245,240,232,.3));box-shadow:0 30px 70px rgba(91,69,41,.16),inset 0 1px 0 rgba(255,255,255,.9);backdrop-filter:blur(18px) saturate(125%);-webkit-backdrop-filter:blur(18px) saturate(125%);transition:transform .65s cubic-bezier(.22,1,.36,1),box-shadow .65s,border-color .5s}.event-card:hover{box-shadow:0 38px 92px rgba(91,69,41,.22),inset 0 1px 0 rgba(255,255,255,.95);border-color:rgba(197,159,94,.75)}.glass-edge{position:absolute;inset:1px;border-radius:29px;border:1px solid rgba(255,255,255,.34);pointer-events:none}.card-shine{position:absolute;top:-20%;left:-35%;width:35%;height:150%;transform:rotate(20deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.34),transparent);transition:left 1s cubic-bezier(.22,1,.36,1);pointer-events:none}.event-card:hover .card-shine{left:125%}.card-content{position:relative;padding:43px 45px;color:#4a3b2a}.card-label{font:600 9px var(--display);letter-spacing:.3em;color:#907047}.event-date{display:flex;justify-content:center;align-items:center;gap:12px;margin:10px 0 27px;font:500 72px/.8 var(--display);color:#80622f}.event-date small{font:600 9px/1.35 var(--display);letter-spacing:.18em;text-align:left}.event-row{display:grid;grid-template-columns:65px 1fr;gap:18px;text-align:left;padding:17px 0;border-top:1px solid rgba(112,89,55,.16);font-size:18px}.event-row label{font:600 8px var(--display);letter-spacing:.18em;color:#a18254;padding-top:5px}.event-row div{line-height:1.25}.event-row strong{display:block;font-weight:600}.event-row small{display:block;font-size:14px;color:#766a5c;margin-top:3px}.countdown-box{padding:50px 30px;border:1px solid rgba(197,164,111,.4);border-radius:28px;background:rgba(255,252,246,.28);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 25px 60px rgba(82,62,35,.1)}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:25px 0 16px}.countdown div{display:flex;flex-direction:column}.countdown b{font:600 clamp(25px,4vw,43px) var(--display);color:#72582d}.countdown span{font:600 7px var(--display);letter-spacing:.12em;color:#9b7d53}.countdown-box p{font-size:15px;color:#756758}.gold-btn,.outline-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;border-radius:999px;padding:13px 20px;border:1px solid rgba(145,108,43,.55);font:600 8px var(--display);letter-spacing:.12em;transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .55s,background .55s}.gold-btn{background:linear-gradient(135deg,#c8a04b,#e2c574);color:#2e220f;box-shadow:0 10px 25px rgba(130,96,31,.18)}.outline-btn{background:rgba(255,255,255,.34);color:#654b27}.gold-btn:hover,.outline-btn:hover{transform:translateY(-4px);box-shadow:0 17px 35px rgba(93,65,22,.2)}.closing-card{padding:48px 38px;border-radius:30px;border:1px solid rgba(255,255,255,.65);background:rgba(255,251,244,.28);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 25px 60px rgba(82,62,35,.12)}.closing-card h2{font-size:47px}.final-names{font:400 47px var(--script);color:#76572a;margin:25px 0}.final-names span{font:italic 24px var(--serif)}.closing-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}footer{padding:8vh 20px 5vh;text-align:center;font:500 8px var(--display);letter-spacing:.18em;color:#816c50}.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:none}.toast{position:fixed;z-index:50;left:50%;bottom:24px;transform:translate(-50%,20px);padding:11px 17px;border:1px solid rgba(210,174,94,.4);border-radius:999px;background:rgba(22,16,9,.82);color:#f3dfad;font:600 8px var(--display);letter-spacing:.12em;opacity:0;pointer-events:none;transition:.4s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){.welcome{min-height:100svh}.welcome-copy{top:23%;width:78vw}.first-page-art{background-size:auto 100%;background-position:center top}.couple-corner{width:54vw;height:38%;right:-4%;bottom:1%}.lantern-rig{width:150px}.rope{height:92px}.lantern-hit{top:92px;width:132px;height:132px}.lantern-float{width:94px;height:110px}.lantern-svg{width:94px;height:110px}.invitation-fixed-bg{background-size:auto 100%;background-position:center top}.invitation-safe-frame{top:6%;bottom:6%;left:8%;right:8%;border-radius:30px}.intro-section{padding:15vh 8vw 15vh}.couple-section,.events,.countdown-section,.closing-section{padding:16vh 8vw}.intro-inner,.section-content,.events-inner,.countdown-box,.closing-card{width:100%}.event-card{border-radius:24px}.card-content{padding:37px 23px}}
+@media(max-width:520px){.initial-orb{width:66px;height:66px}.initial-orb span{font-size:30px}.initials-loader{gap:14px}.loader-caption{top:calc(50% + 70px)}.welcome-copy{top:22%;width:88vw}.welcome h1{font-size:45px}.welcome-date{font-size:9px}.first-countdown strong{font-size:17px}.first-countdown div{min-width:42px}.first-note{font-size:11px}.couple-corner{width:57vw;height:34%;right:-6%;bottom:3%}.pull-prompt{bottom:3.5%;font-size:7px}.intro-section{padding:13vh 7vw 13vh}.bismillah{font-size:24px}.mini-label{font-size:6px;line-height:1.55}.blessing{font-size:20px}.invite-line{font-size:15px}.gold-names span{font-size:39px}.date-line{font-size:8px}.couple-section,.events,.countdown-section,.closing-section{padding:13vh 7vw}.section-content h2,.section-title{font-size:42px}.event-card{margin-top:24px;margin-bottom:11vh}.event-date{font-size:58px}.event-row{grid-template-columns:55px 1fr;gap:9px;font-size:16px}.event-row small{font-size:12px}.countdown-box{padding:38px 14px}.countdown b{font-size:25px}.countdown span{font-size:6px}.closing-card{padding:40px 18px}.closing-card h2{font-size:40px}.final-names{font-size:42px}.gold-btn,.outline-btn{width:100%}.invitation-safe-frame{left:6%;right:6%;top:5.5%;bottom:5.5%}.invitation-scroll{top:5.5%;bottom:5.5%;left:6%;right:6%;padding:6vh 0 6vh}}
+@media(max-width:390px){.welcome h1{font-size:40px}.welcome-copy{top:8%}.couple-corner{width:59vw;height:31%}.first-note{font-size:10px}.gold-names span{font-size:35px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Plane-locked reading window: content can never travel into the artwork above or below it. */
+.invitation-plane-top,.invitation-plane-bottom{display:none}
+@media(max-width:800px){.invitation-fixed-bg{background-size:auto 100%;background-position:center top}.invitation-scroll{top:17.75%;bottom:34.45%;width:100%;left:0;transform:none;padding:18px 13% 70px}.intro-section{padding:18px 0 70px}.couple-section,.events,.countdown-section,.closing-section{padding:80px 0}.intro-inner,.section-content,.events-inner,.countdown-box,.closing-card{width:100%}.event-card{border-radius:24px}.card-content{padding:37px 23px}}
+@media(max-width:520px){.invitation-scroll{top:17.75%;bottom:34.45%;padding:14px 13.5% 60px}.bismillah{font-size:24px}.mini-label{font-size:6px;line-height:1.55}.blessing{font-size:20px}.invite-line{font-size:15px}.gold-names span{font-size:39px}.date-line{font-size:8px}.couple-section,.events,.countdown-section,.closing-section{padding:65px 0}.section-content h2,.section-title{font-size:42px}.event-card{margin-top:24px;margin-bottom:65px}.event-date{font-size:58px}.event-row{grid-template-columns:55px 1fr;gap:9px;font-size:16px}.event-row small{font-size:12px}.countdown-box{padding:38px 14px}.countdown b{font-size:25px}.countdown span{font-size:6px}.closing-card{padding:40px 18px}.closing-card h2{font-size:40px}.final-names{font-size:42px}}
+@media(max-width:390px){.invitation-scroll{padding-left:13%;padding-right:13%}.bismillah{font-size:22px}.gold-names span{font-size:35px}}
+
+
+/* FINAL OPENING REFINEMENT */
+.welcome-copy{
+  top:31% !important;
+  width:min(620px,72vw);
+  z-index:6;
+  text-shadow:0 3px 24px rgba(0,0,0,.62),0 0 28px rgba(0,0,0,.22);
+}
+.welcome h1{
+  font-family:var(--display);
+  font-weight:500;
+  letter-spacing:.055em;
+  line-height:.98;
+  text-transform:none;
+  color:#fff8e8;
+  text-shadow:0 5px 26px rgba(0,0,0,.72),0 0 20px rgba(246,214,129,.12);
+}
+.welcome h1 span{
+  background:linear-gradient(180deg,#fff8e8 0%,#ead49a 52%,#c49a45 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 4px 14px rgba(0,0,0,.45));
+}
+.welcome h1 em{
+  margin:3px 0;
+  font-size:clamp(19px,2.1vw,28px);
+  color:#e7c76c;
+  text-shadow:0 0 18px rgba(231,199,108,.4);
+}
+.welcome-date{color:#f0d38a;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.nikah-countdown-label{color:#f1d27b;text-shadow:0 2px 10px rgba(0,0,0,.72)}
+.first-countdown{gap:8px;margin-top:9px}
+.first-countdown div{
+  min-width:58px;padding:7px 8px 6px;border:1px solid rgba(239,205,111,.38);
+  border-radius:10px;background:linear-gradient(145deg,rgba(14,35,25,.72),rgba(4,15,10,.42));
+  box-shadow:inset 0 1px 0 rgba(255,246,207,.16),0 8px 22px rgba(0,0,0,.25);
+  backdrop-filter:blur(6px);
+}
+.first-countdown strong{font-size:21px;color:#ffe9a7;text-shadow:0 0 15px rgba(255,219,119,.28)}
+.first-countdown small{color:#e1c26e}
+.first-countdown>b{color:#f0d07b;font-size:15px}
+.first-note{color:#e7dcc5;text-shadow:0 2px 10px rgba(0,0,0,.65)}
+.couple-corner{
+  left:50% !important;right:auto !important;bottom:1.3% !important;
+  transform:translateX(-50%);
+  width:min(390px,48vw) !important;height:40% !important;
+  z-index:4;
+}
+.couple-corner img{object-position:center bottom}
+.pull-prompt{bottom:3.5%;background:rgba(7,26,18,.58);color:#f3d88e}
+
+/* Second-stage loading: appears only after the lantern has been pulled successfully. */
+.opening-loader{
+  position:absolute;inset:0;z-index:30;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 44%,rgba(31,66,48,.98) 0%,rgba(8,22,15,.985) 48%,rgba(2,7,5,.99) 100%);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .45s ease,visibility .45s ease;overflow:hidden;
+}
+.opening-loader.show{opacity:1;visibility:visible;pointer-events:auto}
+.opening-loader .loader-caption{top:calc(50% + 84px)}
+.opening-loader .loader-line{bottom:18%}
+
+@media(max-width:800px){
+  .welcome-copy{top:31% !important;width:86vw}
+  .couple-corner{width:min(340px,60vw) !important;height:36% !important;bottom:2% !important}
+}
+@media(max-width:520px){
+  .welcome-copy{top:31% !important;width:90vw}
+  .welcome h1{font-size:clamp(38px,11vw,49px);letter-spacing:.035em}
+  .welcome h1 em{font-size:20px}
+  .welcome-date{margin-top:12px;font-size:9px}
+  .first-countdown{gap:4px}
+  .first-countdown div{min-width:48px;padding:6px 4px}
+  .first-countdown strong{font-size:17px}
+  .first-countdown small{font-size:5.5px}
+  .first-countdown>b{font-size:11px}
+  .first-note{font-size:10.5px;margin-top:8px}
+  .couple-corner{width:min(330px,62vw) !important;height:35% !important;bottom:1.5% !important}
+}
+@media(max-width:390px){
+  .welcome-copy{top:29% !important}
+  .welcome h1{font-size:36px}
+  .first-countdown div{min-width:44px}
+  .couple-corner{width:64vw !important;height:33% !important}
+}
+
+/* v6 — exact supplied invitation artwork + luxury brown calligraphic typography */
+#invitation{
+  --invite-brown:#5a3b25;
+  --invite-deep:#3f2819;
+  --invite-soft:#76543a;
+  background:#efe9df;
+}
+#invitation .invitation-fixed-bg{
+  background-image:url('assets/backgroundwithcouple-2.jpg');
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:auto 100%;
+  background-color:#eee9e1;
+}
+#invitation .invitation-tint{background:linear-gradient(180deg,rgba(255,250,241,.02),rgba(255,249,239,.04));}
+
+/* The decorative artwork is a protected zone. Text exists only inside the central plane. */
+#invitation .invitation-scroll{
+  top:17.75%;
+  bottom:34.45%;
+  width:min(72.8%,675px);
+  padding:28px 12.5% 78px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  mask-image:linear-gradient(to bottom,transparent 0%,black 7%,black 84%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 7%,black 84%,transparent 100%);
+}
+#invitation .invitation-scroll::-webkit-scrollbar{display:none}
+
+#invitation .intro-section,
+#invitation .couple-section,
+#invitation .events,
+#invitation .countdown-section,
+#invitation .closing-section{
+  color:var(--invite-brown);
+}
+#invitation .intro-inner,
+#invitation .section-content,
+#invitation .events-inner,
+#invitation .countdown-box,
+#invitation .closing-card{
+  max-width:500px;
+  color:var(--invite-brown);
+  text-align:center;
+}
+
+/* High-end invitation type hierarchy: calligraphic names/headings, refined serif body copy. */
+#invitation .bismillah{
+  font-family:'Amiri',serif;
+  color:var(--invite-deep);
+  text-shadow:0 1px 1px rgba(255,255,255,.7);
+}
+#invitation .arabic-rule{color:#8d6746}
+#invitation .mini-label,
+#invitation .section-label,
+#invitation .card-label,
+#invitation .date-line,
+#invitation .event-row label,
+#invitation footer{
+  color:#704b2f;
+  text-shadow:0 1px 1px rgba(255,255,255,.65);
+}
+#invitation .blessing,
+#invitation .section-content p,
+#invitation .closing-card>p,
+#invitation .invite-line,
+#invitation .event-row,
+#invitation .countdown-box p{
+  color:#5a3b25;
+  text-shadow:0 1px 1px rgba(255,255,255,.55);
+}
+#invitation .gold-names,
+#invitation .section-content h2,
+#invitation .section-title,
+#invitation .closing-card h2,
+#invitation .final-names{
+  font-family:'Great Vibes',cursive;
+  font-weight:400;
+  color:#56361f;
+  text-shadow:0 2px 1px rgba(255,255,255,.65),0 5px 16px rgba(75,46,25,.12);
+}
+#invitation .gold-names{
+  gap:10px;
+  line-height:.95;
+}
+#invitation .gold-names span{color:#56361f}
+#invitation .gold-names i{color:#805633}
+#invitation .date-line{color:#68452c}
+
+/* Keep every card legible without turning the floral artwork into a generic panel. */
+#invitation .event-card,
+#invitation .countdown-box,
+#invitation .closing-card{
+  color:var(--invite-brown);
+}
+#invitation .event-date,
+#invitation .countdown b{color:#5a3b25}
+#invitation .countdown span{color:#765238}
+#invitation .event-row{border-top-color:rgba(91,59,35,.18)}
+#invitation .event-row small{color:#76543a}
+
+@media(max-width:800px){
+  #invitation .invitation-fixed-bg{background-size:auto 100%;background-position:center top}
+  #invitation .invitation-scroll{top:17.75%;bottom:34.45%;left:0;width:100%;transform:none;padding:22px 13% 72px}
+}
+@media(max-width:520px){
+  #invitation .invitation-scroll{top:17.75%;bottom:34.45%;padding:18px 13.5% 68px}
+  #invitation .gold-names span{font-size:39px}
+}
+
+/* v7 — BLACK & GOLD LUXURY INVITATION */
+#invitation{
+  --invite-gold:#d4af5b;
+  --invite-gold-hi:#f5df9a;
+  --invite-gold-deep:#9d742b;
+  --invite-cream:#f7ead0;
+  --invite-black:#090a0b;
+  background:#08090a;
+  color:var(--invite-cream);
+}
+#invitation .invitation-fixed-bg{
+  background-color:#08090a;
+  background-image:url('assets/Wedding-Card-Background-2.jpg');
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:auto 100%;
+}
+#invitation .invitation-tint{
+  background:
+    linear-gradient(180deg,rgba(3,4,5,.03),rgba(3,4,5,.02) 45%,rgba(3,4,5,.10)),
+    radial-gradient(circle at 50% 43%,transparent 0,transparent 48%,rgba(0,0,0,.18) 100%);
+}
+/* Keep the reading plane exactly where the reference area was defined. */
+#invitation .invitation-scroll{
+  top:17.75%;
+  bottom:34.45%;
+  width:min(72.8%,675px);
+  padding:28px 12.5% 78px;
+  color:var(--invite-cream);
+  mask-image:linear-gradient(to bottom,transparent 0%,black 7%,black 88%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 7%,black 88%,transparent 100%);
+}
+#invitation .intro-section,
+#invitation .couple-section,
+#invitation .events,
+#invitation .countdown-section,
+#invitation .closing-section{color:var(--invite-cream)}
+#invitation .intro-inner,
+#invitation .section-content,
+#invitation .events-inner,
+#invitation .countdown-box,
+#invitation .closing-card{color:var(--invite-cream)}
+#invitation .bismillah{
+  color:var(--invite-gold-hi);
+  text-shadow:0 0 16px rgba(212,175,91,.18),0 2px 2px rgba(0,0,0,.8);
+}
+#invitation .arabic-rule{color:var(--invite-gold);text-shadow:0 0 12px rgba(212,175,91,.3)}
+#invitation .mini-label,
+#invitation .section-label,
+#invitation .card-label,
+#invitation .date-line,
+#invitation .event-row label,
+#invitation footer{
+  color:var(--invite-gold-hi);
+  text-shadow:0 2px 8px rgba(0,0,0,.9);
+}
+#invitation .blessing,
+#invitation .section-content p,
+#invitation .closing-card>p,
+#invitation .invite-line,
+#invitation .event-row,
+#invitation .countdown-box p{
+  color:#ead8b6;
+  text-shadow:0 2px 9px rgba(0,0,0,.95);
+}
+#invitation .gold-names,
+#invitation .section-content h2,
+#invitation .section-title,
+#invitation .closing-card h2,
+#invitation .final-names{
+  font-family:'Great Vibes',cursive;
+  font-weight:400;
+  color:var(--invite-gold-hi);
+  text-shadow:0 1px 0 rgba(255,246,213,.28),0 3px 18px rgba(0,0,0,.95),0 0 24px rgba(212,175,91,.18);
+}
+#invitation .gold-names{gap:12px;line-height:.95}
+#invitation .gold-names span{color:var(--invite-gold-hi)}
+#invitation .gold-names i{color:var(--invite-gold);text-shadow:0 2px 12px rgba(0,0,0,.9)}
+#invitation .date-line{color:var(--invite-gold)}
+/* Dark glass cards so the black/gold theme stays coherent. */
+#invitation .event-card,
+#invitation .countdown-box,
+#invitation .closing-card{
+  color:var(--invite-cream);
+  border:1px solid rgba(218,181,92,.38);
+  background:linear-gradient(145deg,rgba(28,26,22,.72),rgba(7,8,9,.48));
+  box-shadow:0 30px 80px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,229,157,.14),inset 0 0 35px rgba(212,175,91,.035);
+  backdrop-filter:blur(18px) saturate(120%);
+  -webkit-backdrop-filter:blur(18px) saturate(120%);
+}
+#invitation .event-card:hover{border-color:rgba(236,204,125,.7);box-shadow:0 38px 95px rgba(0,0,0,.68),inset 0 1px 0 rgba(255,229,157,.2),0 0 30px rgba(212,175,91,.08)}
+#invitation .glass-edge{border-color:rgba(255,228,156,.12)}
+#invitation .card-shine{background:linear-gradient(90deg,transparent,rgba(255,222,137,.12),transparent)}
+#invitation .card-content{color:var(--invite-cream)}
+#invitation .event-date,
+#invitation .countdown b{color:var(--invite-gold-hi);text-shadow:0 0 18px rgba(212,175,91,.16),0 3px 12px rgba(0,0,0,.9)}
+#invitation .countdown span{color:var(--invite-gold)}
+#invitation .event-row{border-top-color:rgba(218,181,92,.18)}
+#invitation .event-row small{color:#cdb98f}
+#invitation .countdown-box{border-radius:28px}
+#invitation .gold-btn{background:linear-gradient(135deg,#9c7125,#d7b45d 48%,#f1d78d);color:#171108;border-color:rgba(245,220,151,.7);box-shadow:0 12px 30px rgba(0,0,0,.45),0 0 20px rgba(212,175,91,.1)}
+#invitation .outline-btn{background:rgba(9,10,10,.58);color:var(--invite-gold-hi);border-color:rgba(218,181,92,.48)}
+#invitation .gold-btn:hover,#invitation .outline-btn:hover{box-shadow:0 18px 40px rgba(0,0,0,.65),0 0 25px rgba(212,175,91,.16)}
+#invitation .final-names{color:var(--invite-gold-hi)}
+@media(max-width:800px){
+  #invitation .invitation-fixed-bg{background-size:auto 100%;background-position:center top}
+  #invitation .invitation-scroll{top:17.75%;bottom:34.45%;left:0;width:100%;padding:22px 13% 72px}
+}
+@media(max-width:520px){
+  #invitation .invitation-scroll{top:17.75%;bottom:34.45%;padding:18px 13.5% 68px}
+  #invitation .gold-names span{font-size:39px}
+}
+
+
+/* v8 — supplied welcome + invitation artwork, blurred cinematic main stage, venue photography */
+:root{--gold:#d8b35d;--gold-hi:#ffe6a0;--navy:#071c2b;--navy2:#020a11;--ivory:#f8f0df}
+body{background:#050a0e}
+/* Welcome page: use the exact supplied welcomepage artwork. */
+.first-page-art{background-image:var(--welcome-bg) !important;background-position:center center !important;background-size:cover !important}
+.first-page-shade{background:linear-gradient(180deg,rgba(1,8,15,.14),rgba(1,9,15,.06) 42%,rgba(1,7,12,.58)) !important}
+.green-glow{background:radial-gradient(circle at 50% 42%,rgba(255,195,79,.16),transparent 34%),linear-gradient(90deg,rgba(0,0,0,.24),transparent 25%,transparent 75%,rgba(0,0,0,.28)) !important}
+.welcome-copy{top:27% !important;width:min(680px,78vw) !important}
+.welcome h1{font-family:var(--display)!important;font-weight:500!important;line-height:.98!important;letter-spacing:.035em!important;text-shadow:0 5px 30px rgba(0,0,0,.65),0 0 22px rgba(229,184,83,.16)!important}
+.welcome h1 span{display:block}
+.welcome h1 em{font-family:var(--script)!important;font-size:.55em!important;color:#e6c26f!important;margin:1px 0!important}
+.welcome-date,.nikah-countdown-label,.first-note,.eyebrow{color:#f2d58a!important;text-shadow:0 2px 12px #000!important}
+.first-countdown{gap:12px;margin-top:9px}
+.first-countdown div{min-width:68px;padding:9px 7px;border:1px solid rgba(238,205,123,.38);border-radius:12px;background:rgba(3,12,18,.28);backdrop-filter:blur(7px)}
+.first-countdown strong{font-size:24px!important;color:#ffe7a6!important}
+.first-countdown small{color:#d7b96e!important}
+/* Main invitation: fixed image, slight blur only on the image layer, not on text. */
+#invitation{background:#071a26!important;color:#f8ead0!important;overflow:hidden!important}
+#invitation .invitation-fixed-bg{background-image:none!important;background-color:#071a26!important;overflow:hidden}
+#invitation .invitation-fixed-bg:before{content:"";position:absolute;inset:-18px;background:var(--invitation-bg) center/cover no-repeat;filter:blur(2.4px) saturate(.88) brightness(.68);transform:scale(1.035);}
+#invitation .invitation-tint{background:linear-gradient(180deg,rgba(1,10,16,.45),rgba(2,12,19,.28) 40%,rgba(1,8,13,.6))!important;z-index:1}
+#invitation .invitation-scroll{z-index:4;top:7%;bottom:5%;width:min(760px,90vw);padding:12vh 7% 15vh;mask-image:linear-gradient(to bottom,transparent 0,black 7%,black 93%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0,black 7%,black 93%,transparent 100%)}
+#invitation .intro-section{min-height:auto;padding:0 0 9vh}
+#invitation .intro-inner,#invitation .section-content,#invitation .events-inner,#invitation .countdown-box,#invitation .closing-card{max-width:620px;color:#fff4dd;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+#invitation .bismillah{color:#f0cf82!important;text-shadow:0 0 20px rgba(240,207,130,.16)!important}
+#invitation .arabic-rule{color:#d8b05a!important}
+#invitation .mini-label,#invitation .section-label,#invitation .card-label,#invitation .date-line,#invitation .event-row label,#invitation footer{color:#d9bb72!important}
+#invitation .blessing,#invitation .invite-line,#invitation .event-row,#invitation .countdown-box p,#invitation .section-content p,#invitation .closing-card>p{color:#f3e3c5!important}
+#invitation .gold-names,#invitation .section-content h2,#invitation .section-title,#invitation .closing-card h2,#invitation .final-names{color:#f0ca73!important;text-shadow:0 0 20px rgba(230,185,80,.14),0 3px 18px rgba(0,0,0,.65)!important}
+#invitation .gold-names span{color:#ffe09a!important}
+#invitation .gold-names i{color:#d5aa55!important}
+/* Couple on main invitation, kept inside its own visual chapter rather than over event details. */
+.main-couple-section{display:flex;justify-content:center;padding:5vh 0 9vh}
+.main-couple-inner{width:100%;max-width:620px;text-align:center}
+.main-couple{display:block;width:min(330px,62vw);height:auto;margin:18px auto 4px;filter:drop-shadow(0 24px 22px rgba(0,0,0,.55));mix-blend-mode:normal}
+.main-couple-caption{font:400 34px var(--script);color:#f0cb79;text-shadow:0 3px 18px rgba(0,0,0,.7)}
+/* Venue photos. */
+#invitation .event-card{background:linear-gradient(145deg,rgba(5,16,24,.7),rgba(9,27,38,.45))!important;border:1px solid rgba(231,194,106,.42)!important;box-shadow:0 28px 70px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12)!important;color:#f8edd8!important}
+#invitation .venue-photo{display:block;width:100%;height:180px;object-fit:cover;filter:saturate(.9) contrast(1.04);border-bottom:1px solid rgba(231,194,106,.28)}
+#invitation .card-content{color:#f6e7c8!important}
+#invitation .event-date,#invitation .countdown b{color:#f2cd76!important;text-shadow:0 0 16px rgba(237,191,80,.16)}
+#invitation .event-row{border-top-color:rgba(231,194,106,.2)!important}
+#invitation .event-row small{color:#dcc99e!important}
+#invitation .countdown-box,#invitation .closing-card{background:linear-gradient(145deg,rgba(5,15,23,.62),rgba(10,25,35,.38))!important;border:1px solid rgba(231,194,106,.38)!important;box-shadow:0 28px 70px rgba(0,0,0,.4)!important}
+#invitation .gold-btn{background:linear-gradient(135deg,#b78328,#f2d07a 50%,#b78328)!important;color:#1a1308!important;box-shadow:0 12px 30px rgba(210,159,48,.24)!important}
+#invitation .outline-btn{background:rgba(4,15,23,.46)!important;color:#f0d18a!important;border-color:rgba(231,194,106,.48)!important}
+@media(max-width:800px){
+ .welcome-copy{top:23%!important;width:90vw!important}
+ .welcome h1{font-size:clamp(38px,10vw,56px)!important}
+ .couple-corner{width:58vw!important;height:43%!important;right:-1%!important;bottom:0!important}
+ #invitation .invitation-scroll{top:4%;bottom:4%;width:94vw;padding:9vh 6vw 13vh}
+ #invitation .venue-photo{height:150px}
+ .main-couple{width:min(290px,66vw)}
+}
+@media(max-width:520px){
+ .welcome-copy{top:22%!important}
+ .welcome h1{font-size:clamp(34px,11vw,46px)!important}
+ .first-countdown{gap:5px}.first-countdown div{min-width:56px;padding:7px 3px}.first-countdown strong{font-size:18px!important}
+ .couple-corner{width:61vw!important;height:39%!important}
+ #invitation .invitation-scroll{width:96vw;padding:8vh 5vw 11vh}
+ #invitation .venue-photo{height:125px}
+ .main-couple-caption{font-size:30px}
+}
+@media(max-width:390px){.welcome-copy{top:20%!important}.couple-corner{width:64vw!important;height:36%!important}.first-countdown div{min-width:51px}.first-countdown strong{font-size:17px!important}}
+
+/* v9 — interaction hardening + cinematic Trajan-inspired typography */
+:root{
+  --cinematic-display:'Cinzel Decorative','Cinzel','Trajan Pro',Georgia,serif;
+  --cinematic-serif:'Cormorant Garamond',Georgia,serif;
+}
+html,body{overscroll-behavior:none}
+body:not(.invitation-open){overflow:hidden!important;height:100svh}
+/* Never let the invitation exist as a scrollable page before the lantern has opened it. */
+#invitation{
+  position:relative;
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  height:100svh!important;
+  min-height:100svh!important;
+  transition:opacity 1.15s cubic-bezier(.22,1,.36,1),visibility 0s linear 1.15s;
+}
+body.invitation-open #invitation{
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+  transition:opacity 1.15s cubic-bezier(.22,1,.36,1),visibility 0s;
+}
+body.invitation-open{overflow:hidden!important;height:100svh}
+body.invitation-open #welcome{display:none}
+/* Welcome typography is deliberately kept clear of the lantern's vertical path. */
+.welcome-copy{z-index:5;top:29%!important}
+.welcome h1{
+  font-family:var(--cinematic-display)!important;
+  font-weight:500!important;
+  letter-spacing:.035em!important;
+  line-height:.96!important;
+}
+.welcome h1 span{font-family:var(--cinematic-display)!important}
+.welcome h1 em{font-family:var(--cinematic-serif)!important;font-style:italic!important;font-weight:500!important}
+.eyebrow{font-family:var(--cinematic-display)!important;letter-spacing:.34em!important}
+.welcome-date,.nikah-countdown-label,.first-note{font-family:var(--cinematic-display)!important}
+.first-countdown strong{font-family:var(--cinematic-display)!important;font-variant-numeric:tabular-nums}
+/* Keep the lantern's top pivot absolutely fixed; only rope length and pendulum angle change. */
+.lantern-rig{z-index:20!important}
+.ceiling-mount{z-index:3}
+.hanger{will-change:transform}
+.rope,.lantern-hit{will-change:height,top,transform}
+/* Richer, more cinematic main invitation typography. */
+#invitation .mini-label,#invitation .section-label,#invitation .card-label,#invitation .date-line,#invitation .event-row label,#invitation footer{
+  font-family:var(--cinematic-display)!important;
+  letter-spacing:.24em!important;
+}
+#invitation .invite-line,#invitation .blessing,#invitation .event-row,#invitation .countdown-box p,#invitation .section-content p,#invitation .closing-card>p{
+  font-family:var(--cinematic-serif)!important;
+  font-size:clamp(17px,2.1vw,22px)!important;
+  line-height:1.28!important;
+}
+#invitation .gold-names,#invitation .section-content h2,#invitation .section-title,#invitation .closing-card h2,#invitation .final-names{
+  font-family:var(--cinematic-display)!important;
+  font-weight:500!important;
+  letter-spacing:.015em!important;
+}
+#invitation .gold-names{font-size:clamp(38px,5vw,58px)!important;line-height:1.02!important}
+#invitation .gold-names i{font-family:var(--cinematic-serif)!important;font-style:italic!important}
+#invitation .event-date{font-family:var(--cinematic-display)!important}
+#invitation .event-card,#invitation .countdown-box,#invitation .closing-card{transform-style:preserve-3d;will-change:transform}
+#invitation .event-card:after,#invitation .countdown-box:after,#invitation .closing-card:after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(125deg,rgba(255,233,165,.08),transparent 25%,transparent 70%,rgba(255,204,92,.05));
+  opacity:0;transition:opacity .55s ease;
+}
+#invitation .event-card:hover:after,#invitation .countdown-box:hover:after,#invitation .closing-card:hover:after{opacity:1}
+.venue-map-btn{margin-top:18px!important;width:100%;font-family:var(--cinematic-display)!important;font-size:10px!important;letter-spacing:.1em!important}
+/* The main invitation itself owns the scroll; the browser page never scrolls behind it. */
+#invitation .invitation-scroll{overscroll-behavior:contain;scrollbar-width:none}
+@media(max-width:800px){
+  .welcome-copy{top:27%!important;width:92vw!important}
+  .welcome h1{font-size:clamp(30px,8.6vw,52px)!important}
+  .lantern-rig{width:150px!important;height:46%!important}
+  .couple-corner{width:58vw!important;height:40%!important}
+  #invitation .invitation-scroll{top:4%!important;bottom:4%!important}
+}
+@media(max-width:520px){
+  .welcome-copy{top:26%!important}
+  .welcome h1{font-size:clamp(27px,8.8vw,42px)!important;letter-spacing:.025em!important}
+  .welcome-date{font-size:8px!important;letter-spacing:.19em!important}
+  .nikah-countdown-label{margin-top:12px!important}
+  .first-countdown{gap:4px!important}
+  .first-countdown div{min-width:52px!important;padding:6px 3px!important}
+  .first-countdown strong{font-size:17px!important}
+  .first-countdown small{font-size:5px!important}
+  .first-note{font-size:10px!important}
+  #invitation .gold-names{font-size:clamp(30px,9vw,43px)!important}
+  #invitation .invite-line,#invitation .blessing,#invitation .event-row,#invitation .countdown-box p,#invitation .section-content p,#invitation .closing-card>p{font-size:17px!important}
+}
+html.invitation-locked,body.invitation-locked{overflow:hidden!important;height:100svh!important}
+
+/* v10 — precision opening composition: the lantern owns the upper zone, typography starts below it. */
+.welcome-copy{
+  top:clamp(292px,36svh,350px)!important;
+  width:min(650px,88vw)!important;
+}
+.welcome h1{
+  font-family:var(--cinematic-display)!important;
+  font-size:clamp(42px,5.4vw,72px)!important;
+  line-height:.98!important;
+  letter-spacing:.035em!important;
+  text-shadow:0 4px 24px rgba(0,0,0,.58),0 0 18px rgba(236,207,125,.12)!important;
+}
+.welcome-date{margin-top:12px!important}
+.first-note{margin-top:9px!important}
+.pull-prompt{
+  bottom:6%!important;
+  max-width:min(430px,78vw)!important;
+  text-align:center!important;
+  justify-content:center!important;
+  line-height:1.35!important;
+  padding:10px 18px!important;
+  background:rgba(5,20,15,.52)!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.08)!important;
+}
+.pull-prompt span{font-family:var(--cinematic-display)!important;letter-spacing:.13em!important;font-size:9px!important}
+.couple-corner{
+  width:min(350px,30vw)!important;
+  height:31%!important;
+  right:50%!important;
+  transform:translateX(50%)!important;
+  bottom:-1%!important;
+}
+/* Remove any separate name caption beneath the couple artwork. */
+.main-couple-caption{display:none!important}
+
+/* One-second cinematic opening loader with a real 0→100% progress treatment. */
+.opening-loader .loader-line{width:min(300px,55vw)!important;height:2px!important;bottom:18%!important;background:rgba(239,214,147,.18)!important;border-radius:99px}
+.opening-loader .loader-line span{width:0%;animation:none!important;background:linear-gradient(90deg,#b58b3a,#f8e3a1,#b58b3a)!important;box-shadow:0 0 16px rgba(242,211,124,.55)}
+.opening-loader .loader-caption{top:calc(50% + 82px)!important}
+.loader-percent{
+  position:absolute;top:calc(50% + 108px);z-index:2;
+  font:600 12px var(--cinematic-display);letter-spacing:.22em;color:#f4dc98;
+  text-shadow:0 0 16px rgba(241,213,135,.4)
+}
+
+@media(max-width:800px){
+  .welcome-copy{top:clamp(285px,35svh,330px)!important;width:92vw!important}
+  .welcome h1{font-size:clamp(34px,9vw,49px)!important}
+  .couple-corner{width:min(310px,55vw)!important;height:30%!important;right:50%!important;transform:translateX(50%)!important;bottom:0!important}
+  .pull-prompt{bottom:4.5%!important;max-width:74vw!important}
+}
+@media(max-width:520px){
+  .welcome-copy{top:clamp(270px,34svh,315px)!important;width:92vw!important}
+  .welcome h1{font-size:clamp(32px,9.5vw,44px)!important;line-height:1!important}
+  .eyebrow{font-size:9px!important;letter-spacing:.27em!important}
+  .welcome-rule{margin:7px auto 8px!important}
+  .welcome-date{font-size:8px!important;margin-top:10px!important}
+  .nikah-countdown-label{margin-top:10px!important}
+  .first-countdown div{min-width:47px!important;padding:5px 2px!important}
+  .first-countdown strong{font-size:16px!important}
+  .first-countdown small{font-size:5px!important}
+  .first-note{font-size:9px!important;margin-top:7px!important}
+  .couple-corner{width:min(280px,58vw)!important;height:28%!important}
+  .pull-prompt{bottom:3.5%!important;max-width:78vw!important;padding:8px 13px!important}
+  .pull-prompt span{font-size:7px!important;letter-spacing:.11em!important}
+}
+
+/* v11 — cinematic loader redesign + responsive opening composition */
+.preloader{
+  background:
+    radial-gradient(circle at 50% 42%,rgba(24,70,83,.72),transparent 34%),
+    radial-gradient(circle at 50% 100%,rgba(171,119,42,.08),transparent 48%),
+    #03080b;
+  color:#f1d58a;
+}
+.preload-stars{position:absolute;inset:0;opacity:.42;background-image:radial-gradient(circle,rgba(255,233,175,.72) 0 1px,transparent 1.5px);background-size:74px 74px;mask-image:linear-gradient(to bottom,black,transparent 90%);animation:preloadStars 7s linear infinite}
+.preload-arch{position:absolute;width:min(62vw,520px);height:min(72vh,640px);bottom:-12%;left:50%;transform:translateX(-50%);border:1px solid rgba(218,181,93,.18);border-bottom:0;border-radius:48% 48% 0 0;box-shadow:0 0 60px rgba(208,164,65,.06),inset 0 0 40px rgba(208,164,65,.04);overflow:hidden}
+.preload-arch:before,.preload-arch:after{content:"";position:absolute;inset:10px;border:1px solid rgba(238,213,145,.08);border-bottom:0;border-radius:48% 48% 0 0}
+.preload-arch span{position:absolute;left:50%;top:0;width:1px;height:100%;background:linear-gradient(180deg,transparent,#d9b85f 35%,transparent 82%);opacity:.35;animation:archSweep 1.9s ease-in-out infinite}
+.preload-monogram{position:relative;z-index:2;display:flex;align-items:baseline;gap:14px;font-family:var(--cinematic-display);font-size:clamp(42px,6vw,68px);letter-spacing:.08em;color:#f2d790;text-shadow:0 0 35px rgba(226,185,85,.24);animation:preloadMonogram 1.1s cubic-bezier(.22,1,.36,1) both}
+.preload-monogram i{font-family:var(--cinematic-serif);font-size:.48em;font-style:italic;color:#fff1bd}
+.preload-kicker{position:absolute;top:calc(50% + 58px);font:600 9px var(--cinematic-display);letter-spacing:.38em;color:rgba(245,226,174,.68);animation:fadeUp .8s .25s both}
+.preload-line{position:absolute;top:calc(50% + 96px);width:min(250px,55vw);height:1px;background:rgba(241,215,145,.13);overflow:hidden}
+.preload-line span{display:block;width:100%;height:100%;transform:translateX(-100%);background:linear-gradient(90deg,transparent,#f0d17c,transparent);animation:preloadLine 1.15s cubic-bezier(.22,1,.36,1) forwards}
+.preload-status{position:absolute;bottom:12%;font:500 7px var(--cinematic-display);letter-spacing:.34em;color:rgba(242,220,165,.42);animation:fadeUp .8s .35s both}
+
+/* The second loader is intentionally a different visual language: an illuminated royal doorway revealing itself. */
+.opening-loader{position:fixed;inset:0;z-index:900;display:grid;place-items:center;opacity:0;visibility:hidden;pointer-events:none;overflow:hidden;background:#020608;transition:opacity .45s ease,visibility .45s ease}
+.opening-loader.show{opacity:1;visibility:visible;pointer-events:auto}
+.opening-veil{position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,rgba(19,70,86,.65),transparent 38%),linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.72));animation:openingBreath 1.1s ease-in-out infinite alternate}
+.opening-arch{position:relative;width:min(54vw,500px);height:min(70vh,620px);border:1px solid rgba(227,193,111,.42);border-bottom:0;border-radius:48% 48% 0 0;display:grid;place-items:center;box-shadow:0 0 55px rgba(226,184,74,.08),inset 0 0 70px rgba(225,184,76,.05);animation:openingArchIn .75s cubic-bezier(.22,1,.36,1) both}
+.arch-line{position:absolute;inset:12px;border:1px solid rgba(243,216,144,.18);border-bottom:0;border-radius:48% 48% 0 0;transform-origin:center bottom}
+.arch-line-1{animation:archPulse 1s ease-in-out infinite alternate}.arch-line-2{inset:28px;border-color:rgba(243,216,144,.1)}
+.arch-glow{position:absolute;width:42%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(246,207,111,.18),transparent 68%);filter:blur(12px);animation:glowPulse 1s ease-in-out infinite alternate}
+.opening-monogram{position:relative;z-index:2;display:flex;align-items:baseline;gap:13px;font:500 clamp(38px,5vw,60px) var(--cinematic-display);letter-spacing:.08em;color:#f4d98e;text-shadow:0 0 28px rgba(242,202,107,.28)}
+.opening-monogram b{font:italic 400 .48em var(--cinematic-serif);color:#fff0b9}
+.opening-title{position:absolute;top:56%;font:600 9px var(--cinematic-display);letter-spacing:.38em;color:#dfc37f}
+.opening-progress{position:absolute;top:62%;width:min(280px,55vw);height:2px;border-radius:99px;background:rgba(236,207,131,.14);overflow:hidden;box-shadow:0 0 20px rgba(227,187,83,.08)}
+.opening-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,#8d6527,#f7dc91,#8d6527);box-shadow:0 0 15px rgba(243,208,123,.8)}
+.opening-percent{position:absolute;top:66%;font:500 11px var(--cinematic-display);letter-spacing:.22em;color:#f6dda0}
+.opening-status{position:absolute;bottom:13%;font:500 7px var(--cinematic-display);letter-spacing:.34em;color:rgba(239,218,168,.46)}
+
+/* Prompt now belongs to the typography stack, always above Wedding Invitation and safely below the lantern. */
+.welcome-copy{top:clamp(292px,35svh,340px)!important;display:flex;flex-direction:column;align-items:center}
+.pull-prompt{position:relative!important;left:auto!important;bottom:auto!important;transform:none!important;order:-1;margin:0 auto 18px!important;max-width:min(430px,80vw)!important;padding:9px 17px!important;background:rgba(4,14,17,.42)!important;border-color:rgba(235,207,130,.35)!important;box-shadow:0 10px 30px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.08)!important}
+.pull-prompt span{font-family:var(--cinematic-display)!important;font-size:clamp(7px,.72vw,9px)!important;letter-spacing:.14em!important}
+.pull-prompt i{font-size:13px!important}
+.welcome h1{position:relative;z-index:1}
+.couple-corner{width:min(360px,27vw)!important;height:34%!important;right:50%!important;bottom:-.5%!important;transform:translateX(50%)!important;z-index:4!important}
+.couple-corner img{object-position:center bottom!important}
+
+@media(max-width:800px){
+  .welcome-copy{top:clamp(300px,34svh,335px)!important;width:92vw!important}
+  .pull-prompt{margin-bottom:13px!important;max-width:78vw!important}
+  .welcome h1{font-size:clamp(34px,8.8vw,49px)!important}
+  .couple-corner{width:min(300px,64vw)!important;height:31%!important;bottom:-.5%!important}
+}
+@media(max-width:520px){
+  .welcome-copy{top:clamp(300px,33svh,320px)!important}
+  .pull-prompt{margin-bottom:11px!important;padding:8px 12px!important}
+  .pull-prompt span{font-size:6.8px!important;letter-spacing:.105em!important}
+  .welcome h1{font-size:clamp(31px,9.2vw,43px)!important}
+  .welcome-date{font-size:7.5px!important}
+  .first-note{font-size:9px!important}
+  .couple-corner{width:min(285px,65vw)!important;height:29%!important}
+  .preload-arch,.opening-arch{width:72vw;height:72vh}
+  .preload-monogram{font-size:48px}
+}
+@media(max-width:390px){
+  .welcome-copy{top:295px!important}
+  .welcome h1{font-size:31px!important}
+  .couple-corner{width:68vw!important;height:27%!important}
+}
+
+@keyframes preloadStars{to{background-position:0 148px}}
+@keyframes preloadMonogram{from{opacity:0;transform:translateY(16px) scale(.94);letter-spacing:.2em}to{opacity:1;transform:none;letter-spacing:.08em}}
+@keyframes preloadLine{to{transform:translateX(100%)}}
+@keyframes archSweep{0%,100%{transform:translateX(-90px);opacity:.05}50%{transform:translateX(90px);opacity:.65}}
+@keyframes openingBreath{from{opacity:.72}to{opacity:1}}
+@keyframes openingArchIn{from{opacity:0;transform:scale(.92) translateY(18px)}to{opacity:1;transform:none}}
+@keyframes archPulse{from{box-shadow:inset 0 0 8px rgba(240,207,126,.02)}to{box-shadow:inset 0 0 32px rgba(240,207,126,.08)}}
+@keyframes glowPulse{from{transform:scale(.85);opacity:.45}to{transform:scale(1.15);opacity:.9}}
+
+
+/* FINAL WELCOME COUPLE FIX — the new welcome-only artwork is centered independently of the main invitation artwork. */
+.couple-corner{
+  left:50% !important;
+  right:auto !important;
+  bottom:1.2% !important;
+  transform:translateX(-50%) !important;
+  width:min(380px,34vw) !important;
+  height:auto !important;
+  max-height:43svh !important;
+  aspect-ratio:1/1 !important;
+  z-index:4 !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-end !important;
+  overflow:visible !important;
+}
+.couple-corner img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center bottom !important;
+  max-width:100% !important;
+  max-height:100% !important;
+}
+@media (max-width:800px){
+  .couple-corner{
+    width:min(300px,68vw) !important;
+    max-height:34svh !important;
+    bottom:1% !important;
+  }
+}
+@media (max-width:520px){
+  .couple-corner{
+    width:min(275px,66vw) !important;
+    max-height:31svh !important;
+    bottom:.8% !important;
+  }
+}
+@media (max-width:390px){
+  .couple-corner{
+    width:min(250px,64vw) !important;
+    max-height:29svh !important;
+    bottom:.7% !important;
+  }
+}
+
+/* Premium background-music control */
+.music-toggle{
+  position:fixed;right:22px;top:22px;z-index:120;
+  display:flex;align-items:center;gap:8px;
+  min-height:38px;padding:0 13px 0 11px;
+  border:1px solid rgba(224,186,92,.28);border-radius:999px;
+  background:rgba(7,9,13,.48);backdrop-filter:blur(12px);
+  color:rgba(246,226,171,.9);font-family:Cinzel,serif;font-size:9px;letter-spacing:.16em;
+  cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.25);
+  transition:opacity .4s ease,transform .35s ease,border-color .35s ease,background .35s ease;
+}
+.music-toggle:hover{transform:translateY(-2px);border-color:rgba(224,186,92,.55);background:rgba(7,9,13,.68)}
+.music-icon{font-family:Georgia,serif;font-size:18px;line-height:1;color:#e7c878}
+.music-toggle.muted{opacity:.68}
+.music-toggle.muted .music-icon{opacity:.5}
+body:not(.invitation-open) .music-toggle{opacity:.82}
+@media(max-width:600px){
+  .music-toggle{right:12px;top:12px;min-height:34px;padding:0 10px;font-size:8px;letter-spacing:.12em}
+  .music-icon{font-size:16px}
+}
+
+
+/* v16 — refined main-invitation names + cinematic readable typography */
+#invitation .gold-names{
+  display:flex!important;
+  justify-content:center!important;
+  align-items:flex-start!important;
+  gap:clamp(16px,2.8vw,30px)!important;
+  flex-wrap:nowrap!important;
+  margin-top:12px!important;
+  line-height:1!important;
+}
+#invitation .gold-name-group{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  min-width:0!important;
+}
+#invitation .gold-name-group > span{
+  font-family:var(--cinematic-display)!important;
+  font-size:clamp(27px,3.55vw,46px)!important;
+  font-weight:500!important;
+  letter-spacing:.018em!important;
+  line-height:1.05!important;
+  white-space:nowrap!important;
+  color:#78592a!important;
+  text-shadow:0 1px 0 rgba(255,247,220,.45)!important;
+}
+#invitation .gold-name-group > small{
+  display:block!important;
+  margin-top:7px!important;
+  font-family:var(--cinematic-serif)!important;
+  font-size:clamp(12px,1.25vw,16px)!important;
+  font-weight:600!important;
+  letter-spacing:.07em!important;
+  line-height:1.1!important;
+  white-space:nowrap!important;
+  color:#8b7458!important;
+}
+#invitation .gold-names > i{
+  flex:0 0 auto!important;
+  margin-top:7px!important;
+  font-family:var(--cinematic-serif)!important;
+  font-size:clamp(22px,2.4vw,31px)!important;
+  font-style:italic!important;
+  font-weight:500!important;
+  color:#ae884b!important;
+}
+/* Keep body copy elegant but substantially easier to read. */
+#invitation .invite-line,
+#invitation .section-content p,
+#invitation .closing-card>p,
+#invitation .event-row,
+#invitation .blessing{
+  text-rendering:geometricPrecision!important;
+  -webkit-font-smoothing:antialiased!important;
+}
+#invitation .invite-line{font-weight:500!important;letter-spacing:.01em!important}
+#invitation .blessing{font-weight:500!important}
+#invitation .mini-label,#invitation .section-label,#invitation .card-label,#invitation .date-line,#invitation .event-row label,#invitation footer{
+  font-weight:600!important;
+  text-rendering:geometricPrecision!important;
+  -webkit-font-smoothing:antialiased!important;
+}
+@media(max-width:520px){
+  #invitation .gold-names{gap:10px!important}
+  #invitation .gold-name-group > span{font-size:clamp(22px,7.2vw,34px)!important;letter-spacing:.01em!important}
+  #invitation .gold-name-group > small{font-size:10px!important;letter-spacing:.045em!important;margin-top:6px!important}
+  #invitation .gold-names > i{font-size:21px!important;margin-top:5px!important}
+}
+@media(max-width:390px){
+  #invitation .gold-names{gap:7px!important}
+  #invitation .gold-name-group > span{font-size:21px!important}
+  #invitation .gold-name-group > small{font-size:9px!important}
+  #invitation .gold-names > i{font-size:18px!important}
+}
+
+
+/* v17 — warm white / white cinematic invitation typography */
+#invitation .intro-inner,
+#invitation .section-content,
+#invitation .events-inner,
+#invitation .countdown-box,
+#invitation .closing-card{color:#f8f3e8!important}
+#invitation .mini-label,
+#invitation .section-label,
+#invitation .card-label,
+#invitation .date-line,
+#invitation .event-row label,
+#invitation footer{color:#e7d9bd!important}
+#invitation .blessing,
+#invitation .invite-line,
+#invitation .event-row,
+#invitation .countdown-box p,
+#invitation .section-content p,
+#invitation .closing-card>p{color:#f7f2e9!important}
+#invitation .section-content h2,
+#invitation .section-title,
+#invitation .closing-card h2,
+#invitation .final-names{color:#fff8ea!important}
+#invitation .gold-name-group > span{color:#fff8ea!important;text-shadow:0 0 18px rgba(255,246,220,.12),0 3px 18px rgba(0,0,0,.75)!important}
+#invitation .gold-name-group > small{color:#e8dfd0!important}
+#invitation .gold-names > i{color:#e2c77f!important}
+#invitation .gratitude-closing{margin:26px auto 24px;max-width:560px;text-align:center}
+#invitation .gratitude-title{font:600 clamp(11px,1.2vw,15px) var(--cinematic-display);letter-spacing:.24em;color:#fff8ea!important;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+#invitation .gratitude-copy{font:500 clamp(16px,1.7vw,20px)/1.55 var(--cinematic-serif);color:#f4eee4!important;margin:14px auto 0;max-width:500px}
+#invitation .gratitude-copy + .gratitude-copy{margin-top:8px}
+#invitation .gratitude-star{margin:19px 0 14px;font:400 17px Georgia,serif;color:#e4c778;text-shadow:0 0 15px rgba(228,199,120,.25)}
+#invitation .warm-regards{font:500 12px var(--cinematic-serif);font-style:italic;letter-spacing:.08em;color:#e8dfd0!important;margin-bottom:7px}
+#invitation .family-invitation{font:500 clamp(20px,2.1vw,28px) var(--cinematic-display);letter-spacing:.05em;color:#fff8ea!important;text-shadow:0 3px 18px rgba(0,0,0,.75)}
+#invitation .final-names{margin-top:22px!important}
+@media(max-width:520px){
+ #invitation .gratitude-closing{margin-top:20px}
+ #invitation .gratitude-title{font-size:9px;letter-spacing:.18em}
+ #invitation .gratitude-copy{font-size:15px;line-height:1.5}
+ #invitation .family-invitation{font-size:19px;line-height:1.25}
+}
+
+/* v18 — royal warm-white / champagne-gold names + family contact card */
+#invitation .gold-name-group > .royal-name{
+  position:relative!important;
+  display:inline-block!important;
+  font-family:var(--cinematic-display)!important;
+  font-weight:600!important;
+  letter-spacing:.035em!important;
+  color:#fff9e9!important;
+  background:linear-gradient(180deg,#fffdf3 0%,#f8edc8 42%,#d9b86a 72%,#fff5d7 100%)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:0 0 12px rgba(255,238,174,.16),0 3px 18px rgba(0,0,0,.72)!important;
+  filter:drop-shadow(0 0 7px rgba(224,190,105,.12))!important;
+}
+#invitation .gold-name-group > .royal-name::after{
+  content:"";
+  position:absolute;
+  left:8%; right:8%; bottom:-7px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#e7c873 28%,#fff4cf 50%,#e7c873 72%,transparent);
+  opacity:.8;
+}
+#invitation .royal-inline-name,
+#invitation .royal-footer-name{
+  font-family:var(--cinematic-display)!important;
+  font-weight:600!important;
+  letter-spacing:.035em!important;
+  color:#fff9e9!important;
+  background:linear-gradient(180deg,#fffdf3 0%,#f8edc8 45%,#d9b86a 75%,#fff5d7 100%)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:0 0 10px rgba(255,238,174,.12),0 2px 10px rgba(0,0,0,.6)!important;
+}
+#invitation .contact-card{
+  width:min(92%,520px);
+  margin:30px auto 8px;
+  padding:22px 24px 20px;
+  text-align:center;
+  border:1px solid rgba(229,198,123,.38);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(10,16,28,.72),rgba(5,9,17,.55));
+  box-shadow:0 18px 45px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,250,230,.08);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+#invitation .contact-ornament{font:400 16px Georgia,serif;color:#e5c574;text-shadow:0 0 14px rgba(229,197,116,.25);margin-bottom:7px}
+#invitation .contact-label{font:600 10px var(--cinematic-display);letter-spacing:.22em;color:#e9d9b8;text-transform:uppercase}
+#invitation .contact-title{margin-top:8px;font:500 clamp(19px,2vw,25px) var(--cinematic-display);letter-spacing:.04em;color:#fff8ea;text-shadow:0 2px 13px rgba(0,0,0,.7)}
+#invitation .contact-number{display:inline-block;margin-top:10px;font:600 clamp(21px,2.4vw,29px) var(--cinematic-display);letter-spacing:.12em;color:#fff9e8;text-decoration:none;background:linear-gradient(180deg,#fffdf3,#efd78e 55%,#d4ad55);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 12px rgba(240,211,132,.13)}
+#invitation .contact-number:hover{filter:brightness(1.12);transform:translateY(-1px)}
+#invitation .contact-note{margin-top:5px;font:400 13px var(--cinematic-serif);letter-spacing:.03em;color:#e8dfd0}
+@media(max-width:520px){
+  #invitation .gold-name-group > .royal-name{letter-spacing:.02em}
+  #invitation .gold-name-group > .royal-name::after{bottom:-6px}
+  #invitation .contact-card{margin-top:24px;padding:19px 16px 18px;border-radius:16px}
+  #invitation .contact-label{font-size:8px;letter-spacing:.16em}
+  #invitation .contact-title{font-size:18px}
+  #invitation .contact-number{font-size:22px;letter-spacing:.08em}
+  #invitation .contact-note{font-size:12px}
+}
+
+
+/* v19 — Roman Caps-inspired cinematic names + private call action */
+:root{--name-display:'Roman Caps','Bodoni Moda','Times New Roman',serif;}
+
+/* The couple names use a high-contrast Roman display treatment, distinct from all supporting copy. */
+.welcome h1 span,
+#invitation .gold-name-group > .royal-name,
+#invitation .royal-inline-name,
+#invitation .royal-footer-name{
+  font-family:var(--name-display)!important;
+  font-weight:500!important;
+  text-transform:uppercase!important;
+  font-variant:normal!important;
+  letter-spacing:.045em!important;
+  line-height:.94!important;
+  -webkit-font-smoothing:antialiased!important;
+  text-rendering:geometricPrecision!important;
+}
+
+/* Welcome page: retain the existing composition, but give the names the Roman display face. */
+.welcome h1 span{
+  font-size:1.03em!important;
+  background:linear-gradient(180deg,#fffdf4 0%,#f4e7bf 43%,#d7b66b 70%,#fff5d9 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:0 0 18px rgba(255,238,177,.14),0 5px 22px rgba(0,0,0,.55)!important;
+}
+
+/* Main invitation: separate the two names generously so the ampersand never visually collides. */
+#invitation .gold-names{
+  gap:clamp(28px,5.2vw,68px)!important;
+  align-items:flex-start!important;
+  margin-top:18px!important;
+}
+#invitation .gold-name-group{
+  flex:0 1 auto!important;
+}
+#invitation .gold-name-group > .royal-name{
+  font-size:clamp(29px,4.1vw,54px)!important;
+  letter-spacing:.055em!important;
+  padding:0 .02em!important;
+  background:linear-gradient(180deg,#fffef7 0%,#f7eac4 38%,#e0bd6d 67%,#fff8df 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  filter:drop-shadow(0 0 8px rgba(230,194,108,.18))!important;
+  text-shadow:none!important;
+}
+#invitation .gold-name-group > .royal-name::after{
+  left:5%!important;right:5%!important;bottom:-9px!important;
+  height:1px!important;
+  background:linear-gradient(90deg,transparent,#dcb866 20%,#fff4ce 50%,#dcb866 80%,transparent)!important;
+}
+#invitation .gold-names > i{
+  margin:7px 0 0!important;
+  padding:0 2px!important;
+  font-family:var(--name-display)!important;
+  font-style:normal!important;
+  font-size:clamp(25px,2.7vw,35px)!important;
+  color:#f0d58f!important;
+  text-shadow:0 0 14px rgba(240,213,143,.18)!important;
+}
+
+/* Final couple signature. */
+#invitation .final-names{
+  display:flex!important;
+  justify-content:center!important;
+  align-items:baseline!important;
+  gap:clamp(14px,2.5vw,28px)!important;
+  font-family:var(--name-display)!important;
+  text-transform:uppercase!important;
+}
+#invitation .royal-inline-name,
+#invitation .royal-footer-name{
+  background:linear-gradient(180deg,#fffef6 0%,#f6e8bd 43%,#d9b568 70%,#fff6d8 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:0 0 14px rgba(240,213,143,.13),0 3px 12px rgba(0,0,0,.55)!important;
+}
+#invitation .final-names > span:not(.royal-inline-name){
+  color:#e5c87e!important;
+  font-family:var(--name-display)!important;
+}
+
+/* Contact card: never expose the phone number; the CTA launches the phone dialer. */
+#invitation .contact-number{display:none!important}
+#invitation .contact-call{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:12px!important;
+  min-width:190px!important;
+  margin-top:15px!important;
+  padding:12px 22px!important;
+  border:1px solid rgba(239,211,139,.55)!important;
+  border-radius:999px!important;
+  text-decoration:none!important;
+  font:600 10px var(--cinematic-display)!important;
+  letter-spacing:.18em!important;
+  color:#fff8e5!important;
+  background:linear-gradient(180deg,rgba(255,248,220,.10),rgba(196,151,61,.08))!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 8px 24px rgba(0,0,0,.22),0 0 20px rgba(220,183,94,.08)!important;
+  transition:transform .25s ease,filter .25s ease,border-color .25s ease,background .25s ease!important;
+}
+#invitation .contact-call span{font-size:14px!important;line-height:1!important;color:#e9ca7b!important}
+#invitation .contact-call:hover{transform:translateY(-2px)!important;filter:brightness(1.08)!important;border-color:rgba(255,228,153,.78)!important;background:linear-gradient(180deg,rgba(255,248,220,.15),rgba(196,151,61,.12))!important}
+#invitation .contact-call:active{transform:translateY(0)!important}
+
+@media(max-width:600px){
+  .welcome h1 span{letter-spacing:.035em!important}
+  #invitation .gold-names{gap:clamp(18px,6vw,30px)!important;margin-top:16px!important}
+  #invitation .gold-name-group > .royal-name{font-size:clamp(23px,7.4vw,36px)!important;letter-spacing:.045em!important}
+  #invitation .gold-name-group > small{font-size:10px!important}
+  #invitation .gold-names > i{font-size:22px!important;margin-top:5px!important}
+  #invitation .final-names{gap:15px!important}
+  #invitation .contact-call{min-width:178px!important;padding:11px 19px!important}
+}
+@media(max-width:390px){
+  #invitation .gold-names{gap:14px!important}
+  #invitation .gold-name-group > .royal-name{font-size:21px!important;letter-spacing:.035em!important}
+  #invitation .gold-names > i{font-size:18px!important}
+}
+
+/* v20 — true two-column Roman-cap name layout: no collision at any viewport */
+:root{--name-display:'Bodoni Moda','Times New Roman',serif;}
+
+/* Welcome page: keep both names on one controlled row, with the ampersand in its own column. */
+.welcome h1{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  align-items:baseline!important;
+  justify-content:center!important;
+  width:min(94vw,980px)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  column-gap:clamp(14px,2.6vw,38px)!important;
+  font-family:var(--name-display)!important;
+  font-size:clamp(34px,5.2vw,68px)!important;
+  letter-spacing:.045em!important;
+  line-height:.92!important;
+}
+.welcome h1 span{
+  display:block!important;
+  min-width:0!important;
+  white-space:nowrap!important;
+  font-family:var(--name-display)!important;
+  font-weight:500!important;
+}
+.welcome h1 span:first-child{text-align:right!important}
+.welcome h1 span:last-child{text-align:left!important}
+.welcome h1 em{
+  display:block!important;
+  margin:0!important;
+  font-family:var(--name-display)!important;
+  font-style:normal!important;
+  font-size:.48em!important;
+  line-height:1!important;
+  color:#f0d58f!important;
+  white-space:nowrap!important;
+}
+
+/* Main invitation: three explicit columns. The names can never occupy each other's space. */
+#invitation .gold-names{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  align-items:start!important;
+  justify-content:center!important;
+  width:100%!important;
+  max-width:620px!important;
+  margin:18px auto 0!important;
+  gap:clamp(18px,3vw,42px)!important;
+  flex-wrap:nowrap!important;
+}
+#invitation .gold-name-group{
+  min-width:0!important;
+  width:100%!important;
+  overflow:visible!important;
+}
+#invitation .gold-name-group:first-child{text-align:right!important}
+#invitation .gold-name-group:last-child{text-align:left!important}
+#invitation .gold-name-group > .royal-name{
+  display:block!important;
+  width:100%!important;
+  white-space:nowrap!important;
+  font-family:var(--name-display)!important;
+  font-size:clamp(25px,3.35vw,47px)!important;
+  font-weight:500!important;
+  letter-spacing:.045em!important;
+  line-height:.94!important;
+  text-align:inherit!important;
+  padding:0!important;
+  background:linear-gradient(180deg,#fffef7 0%,#f7eac4 38%,#e0bd6d 67%,#fff8df 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  filter:drop-shadow(0 0 8px rgba(230,194,108,.18))!important;
+}
+#invitation .gold-name-group > .royal-name::after{
+  left:3%!important;right:3%!important;bottom:-8px!important;
+}
+#invitation .gold-name-group > small{
+  display:block!important;
+  margin-top:11px!important;
+  white-space:nowrap!important;
+  font-family:var(--cinematic-serif)!important;
+  font-size:11px!important;
+  letter-spacing:.045em!important;
+  text-align:inherit!important;
+  color:#eee5d5!important;
+}
+#invitation .gold-names > i{
+  align-self:start!important;
+  margin:5px 0 0!important;
+  font-family:var(--name-display)!important;
+  font-style:normal!important;
+  font-size:clamp(22px,2.5vw,32px)!important;
+  line-height:1!important;
+  color:#f0d58f!important;
+  white-space:nowrap!important;
+}
+
+/* Keep the closing couple signature equally clean and separated. */
+#invitation .final-names{
+  display:flex!important;
+  align-items:baseline!important;
+  justify-content:center!important;
+  gap:clamp(20px,3vw,38px)!important;
+  white-space:nowrap!important;
+}
+#invitation .royal-inline-name,
+#invitation .royal-footer-name{
+  font-family:var(--name-display)!important;
+  font-weight:500!important;
+  letter-spacing:.055em!important;
+}
+
+@media(max-width:600px){
+  .welcome h1{
+    width:96vw!important;
+    column-gap:12px!important;
+    font-size:clamp(27px,8.3vw,44px)!important;
+    letter-spacing:.025em!important;
+  }
+  #invitation .gold-names{
+    max-width:100%!important;
+    gap:12px!important;
+  }
+  #invitation .gold-name-group > .royal-name{
+    font-size:clamp(18px,5.7vw,31px)!important;
+    letter-spacing:.025em!important;
+  }
+  #invitation .gold-name-group > small{font-size:8.5px!important;letter-spacing:.025em!important}
+  #invitation .gold-names > i{font-size:19px!important;margin-top:4px!important}
+  #invitation .final-names{gap:16px!important}
+}
+@media(max-width:390px){
+  .welcome h1{font-size:26px!important;column-gap:9px!important}
+  #invitation .gold-names{gap:8px!important}
+  #invitation .gold-name-group > .royal-name{font-size:17px!important;letter-spacing:.015em!important}
+  #invitation .gold-name-group > small{font-size:7.5px!important}
+  #invitation .gold-names > i{font-size:17px!important}
+}
+
+/* v21 — responsive name composition: elegant side-by-side on wide screens, stacked on narrow screens */
+#invitation .gold-names{
+  max-width:760px!important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  column-gap:clamp(20px,4vw,58px)!important;
+}
+#invitation .gold-name-group > .royal-name{
+  font-size:clamp(24px,3.15vw,44px)!important;
+  letter-spacing:.035em!important;
+}
+#invitation .gold-name-group > small{
+  font-size:clamp(10px,1.05vw,14px)!important;
+}
+
+/* On phones and narrow tablets, stack the names instead of squeezing/cropping them. */
+@media(max-width:700px){
+  #invitation .gold-names{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:100%!important;
+    max-width:100%!important;
+    gap:0!important;
+    margin-top:20px!important;
+  }
+  #invitation .gold-name-group{
+    width:auto!important;
+    max-width:100%!important;
+    text-align:center!important;
+    align-items:center!important;
+  }
+  #invitation .gold-name-group:first-child,
+  #invitation .gold-name-group:last-child{ text-align:center!important; }
+  #invitation .gold-name-group > .royal-name{
+    width:auto!important;
+    max-width:92vw!important;
+    white-space:nowrap!important;
+    font-size:clamp(29px,9vw,42px)!important;
+    letter-spacing:.035em!important;
+    line-height:1!important;
+  }
+  #invitation .gold-name-group > small{
+    width:auto!important;
+    margin-top:7px!important;
+    font-size:clamp(11px,3.1vw,14px)!important;
+    letter-spacing:.04em!important;
+  }
+  #invitation .gold-names > i{
+    margin:17px 0!important;
+    font-size:26px!important;
+    line-height:1!important;
+  }
+}
+@media(max-width:390px){
+  #invitation .gold-name-group > .royal-name{font-size:clamp(26px,8.4vw,34px)!important;letter-spacing:.025em!important}
+  #invitation .gold-name-group > small{font-size:10px!important}
+}
+
+/* Welcome page: never allow the couple names to collide on small screens. */
+@media(max-width:700px){
+  .welcome h1{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:92vw!important;
+    gap:5px!important;
+    font-size:clamp(34px,10vw,56px)!important;
+    line-height:1!important;
+  }
+  .welcome h1 span,
+  .welcome h1 span:first-child,
+  .welcome h1 span:last-child{
+    text-align:center!important;
+    white-space:nowrap!important;
+  }
+  .welcome h1 em{
+    font-size:.45em!important;
+    margin:3px 0!important;
+  }
+}
+
+/* v22 — final typography/layout correction */
+:root{
+  --name-display:'Bodoni Moda','Roman Caps','Times New Roman',serif;
+  --name-serif:'Bodoni Moda','Cormorant Garamond',Georgia,serif;
+}
+
+/* Welcome: the complete composition is always mathematically centered. */
+.welcome-copy{
+  left:50%!important;
+  width:100vw!important;
+  max-width:none!important;
+  text-align:center!important;
+}
+.welcome h1{
+  width:min(94vw,1180px)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  column-gap:clamp(12px,2.2vw,34px)!important;
+  align-items:baseline!important;
+  justify-items:stretch!important;
+  font-family:var(--name-display)!important;
+  font-weight:500!important;
+  font-size:clamp(30px,4.15vw,62px)!important;
+  line-height:.94!important;
+  letter-spacing:.025em!important;
+  overflow:visible!important;
+}
+.welcome h1 span{min-width:0!important;white-space:nowrap!important;font-family:var(--name-display)!important;font-weight:500!important}
+.welcome h1 span:first-child{text-align:right!important}
+.welcome h1 span:last-child{text-align:left!important}
+.welcome h1 em{font-family:var(--name-serif)!important;font-style:normal!important;font-size:.42em!important;white-space:nowrap!important;color:#f3d993!important}
+
+/* Main invitation: keep the intro names inside a deliberately wider local canvas. */
+#invitation .intro-section{padding-left:0!important;padding-right:0!important}
+#invitation .intro-inner{width:100%!important;max-width:none!important}
+#invitation .gold-names{
+  width:min(100%,620px)!important;
+  max-width:620px!important;
+  margin:18px auto 0!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  column-gap:clamp(14px,2vw,28px)!important;
+  align-items:start!important;
+}
+#invitation .gold-name-group{min-width:0!important;overflow:visible!important}
+#invitation .gold-name-group > .royal-name{
+  font-family:var(--name-display)!important;
+  font-size:clamp(22px,2.45vw,36px)!important;
+  letter-spacing:.018em!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+}
+#invitation .gold-name-group > small{
+  font-family:var(--name-serif)!important;
+  font-size:clamp(9px,1vw,12px)!important;
+  letter-spacing:.02em!important;
+  white-space:nowrap!important;
+}
+#invitation .gold-names > i{
+  font-family:var(--name-serif)!important;
+  font-size:clamp(18px,1.8vw,25px)!important;
+  margin-top:3px!important;
+}
+
+/* Closing/other occurrences: same refined name family, but never oversized. */
+#invitation .royal-inline-name,
+#invitation .royal-footer-name,
+#invitation .final-names{font-family:var(--name-display)!important}
+
+/* Narrow screens: switch to a clean vertical composition before anything can crop. */
+@media(max-width:700px){
+  .welcome-copy{width:100vw!important;left:50%!important}
+  .welcome h1{
+    width:94vw!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    gap:3px!important;
+    font-size:clamp(30px,9vw,46px)!important;
+    line-height:1!important;
+  }
+  .welcome h1 span:first-child,.welcome h1 span:last-child{text-align:center!important}
+  .welcome h1 em{font-size:.38em!important;margin:2px 0!important}
+
+  #invitation .gold-names{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    width:100%!important;
+    max-width:100%!important;
+    gap:0!important;
+  }
+  #invitation .gold-name-group,
+  #invitation .gold-name-group:first-child,
+  #invitation .gold-name-group:last-child{
+    width:auto!important;
+    max-width:100%!important;
+    text-align:center!important;
+  }
+  #invitation .gold-name-group > .royal-name{
+    font-size:clamp(25px,8vw,38px)!important;
+    letter-spacing:.02em!important;
+  }
+  #invitation .gold-name-group > small{font-size:10px!important;margin-top:7px!important}
+  #invitation .gold-names > i{font-size:24px!important;margin:14px 0!important}
+}
+@media(max-width:390px){
+  #invitation .gold-name-group > .royal-name{font-size:clamp(23px,7.8vw,32px)!important}
+  #invitation .gold-name-group > small{font-size:9.5px!important}
+}
+
+/* v23 — mobile-only ampersand centering fix. No other layout changes. */
+@media(max-width:700px){
+  #invitation .gold-names > i{
+    align-self:center!important;
+  }
+}
+
+/* v24 — Main invitation names: clean vertical composition on every screen size.
+   Only the main invitation couple-name block is changed. Welcome page is untouched. */
+#invitation .gold-names{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  max-width:100%!important;
+  gap:0!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+#invitation .gold-name-group,
+#invitation .gold-name-group:first-child,
+#invitation .gold-name-group:last-child{
+  width:auto!important;
+  max-width:100%!important;
+  text-align:center!important;
+}
+#invitation .gold-name-group > .royal-name{
+  width:auto!important;
+  max-width:92vw!important;
+  white-space:nowrap!important;
+  text-align:center!important;
+  font-size:clamp(25px,4vw,46px)!important;
+  letter-spacing:.025em!important;
+  line-height:1!important;
+}
+#invitation .gold-name-group > small{
+  display:block!important;
+  width:auto!important;
+  margin-top:7px!important;
+  text-align:center!important;
+  font-size:clamp(10px,1.15vw,14px)!important;
+  white-space:nowrap!important;
+}
+#invitation .gold-names > i{
+  display:block!important;
+  align-self:center!important;
+  margin:15px 0!important;
+  text-align:center!important;
+  font-size:clamp(20px,2.2vw,28px)!important;
+  line-height:1!important;
+}
+
+@media(max-width:700px){
+  #invitation .gold-name-group > .royal-name{
+    max-width:92vw!important;
+    font-size:clamp(25px,8vw,38px)!important;
+    letter-spacing:.02em!important;
+  }
+  #invitation .gold-name-group > small{
+    font-size:10px!important;
+    letter-spacing:.025em!important;
+  }
+  #invitation .gold-names > i{
+    margin:14px 0!important;
+    font-size:24px!important;
+    align-self:center!important;
+  }
+}
+@media(max-width:390px){
+  #invitation .gold-name-group > .royal-name{
+    font-size:clamp(23px,7.8vw,32px)!important;
+  }
+  #invitation .gold-name-group > small{font-size:9.5px!important}
+}
+
+
+/* v27 — live downward scroll guidance; disappears on the first scroll gesture. */
+#invitation .scroll-hint-arrows{
+  position:absolute;
+  z-index:6;
+  left:0;
+  right:0;
+  bottom:clamp(14px,2.6vh,30px);
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  padding:0 clamp(14px,2.4vw,34px);
+  pointer-events:none;
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity .45s ease,transform .45s ease;
+}
+#invitation .scroll-hint-arrows.is-hidden{
+  opacity:0;
+  transform:translateY(18px);
+}
+#invitation .scroll-arrow{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  width:clamp(38px,3.4vw,50px);
+  height:clamp(64px,6vw,78px);
+  color:#f0d27f;
+  filter:drop-shadow(0 0 5px rgba(240,210,127,.78)) drop-shadow(0 0 14px rgba(240,210,127,.42));
+}
+#invitation .scroll-arrow i{
+  display:block;
+  width:clamp(12px,1.15vw,16px);
+  height:clamp(12px,1.15vw,16px);
+  border-right:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:rotate(45deg);
+  margin-top:-5px;
+  opacity:0;
+  animation:scrollArrowFlow 1.05s cubic-bezier(.4,0,.2,1) infinite;
+  will-change:transform,opacity,filter;
+}
+#invitation .scroll-arrow i:nth-child(1){animation-delay:0s}
+#invitation .scroll-arrow i:nth-child(2){animation-delay:.20s}
+#invitation .scroll-arrow i:nth-child(3){animation-delay:.40s}
+#invitation .scroll-arrow-right i{animation-delay:.10s}
+#invitation .scroll-arrow-right i:nth-child(2){animation-delay:.30s}
+#invitation .scroll-arrow-right i:nth-child(3){animation-delay:.50s}
+@keyframes scrollArrowFlow{
+  0%{opacity:0;transform:translateY(-3px) rotate(45deg) scale(.65);filter:drop-shadow(0 0 1px currentColor)}
+  18%{opacity:1;transform:translateY(2px) rotate(45deg) scale(1);filter:drop-shadow(0 0 7px currentColor)}
+  48%{opacity:1;transform:translateY(9px) rotate(45deg) scale(1.03);filter:drop-shadow(0 0 10px currentColor)}
+  78%{opacity:.42;transform:translateY(18px) rotate(45deg) scale(.86);filter:drop-shadow(0 0 4px currentColor)}
+  100%{opacity:0;transform:translateY(24px) rotate(45deg) scale(.65);filter:drop-shadow(0 0 0 currentColor)}
+}
+@media(max-width:700px){
+  #invitation .scroll-hint-arrows{
+    bottom:clamp(12px,2.2vh,22px);
+    padding-left:9px;
+    padding-right:9px;
+  }
+  #invitation .scroll-arrow{
+    width:32px;
+    height:60px;
+    filter:drop-shadow(0 0 4px rgba(240,210,127,.85)) drop-shadow(0 0 11px rgba(240,210,127,.45));
+  }
+  #invitation .scroll-arrow i{
+    width:10px;
+    height:10px;
+    border-width:1.8px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #invitation .scroll-arrow i{animation:none;opacity:.95;transform:rotate(45deg)}
+}
+
+/* v28 — customer-safe responsive typography. Never crop or force long names off-screen. */
+#invitation .intro-inner{max-width:100%!important;min-width:0!important}
+#invitation .gold-names{
+  width:100%!important;
+  max-width:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  padding-inline:0!important;
+  box-sizing:border-box!important;
+}
+#invitation .gold-name-group,
+#invitation .gold-name-group:first-child,
+#invitation .gold-name-group:last-child{
+  width:min(100%,560px)!important;
+  max-width:100%!important;
+  min-width:0!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .gold-name-group > .royal-name{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  text-align:center!important;
+  font-size:clamp(24px,4.2vw,46px)!important;
+  line-height:1.02!important;
+  letter-spacing:.02em!important;
+  box-sizing:border-box!important;
+}
+#invitation .gold-name-group > small{
+  display:block!important;
+  max-width:100%!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  text-align:center!important;
+}
+#invitation .gold-names > i{
+  display:block!important;
+  align-self:center!important;
+  flex:0 0 auto!important;
+  margin:14px 0!important;
+  text-align:center!important;
+}
+
+/* Wide welcome layouts may remain side-by-side only when they actually fit. */
+.welcome-copy{left:50%!important;right:auto!important;transform:translateX(-50%)!important;box-sizing:border-box!important}
+.welcome h1{max-width:100%!important;box-sizing:border-box!important}
+.welcome h1 span{min-width:0!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:normal!important}
+@media (max-width:1100px){
+  .welcome-copy{width:min(92vw,700px)!important}
+}
+@media (max-width:700px){
+  .welcome-copy{left:50%!important;right:auto!important;width:92vw!important;transform:translateX(-50%)!important}
+  .welcome h1{width:100%!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important}
+  .welcome h1 span{width:100%!important;text-align:center!important;white-space:normal!important;font-size:clamp(30px,8.8vw,46px)!important;line-height:1!important}
+  .welcome h1 em{align-self:center!important;margin:5px 0!important}
+  #invitation .invitation-scroll{width:100%!important;left:0!important;transform:none!important;padding-left:clamp(20px,8vw,60px)!important;padding-right:clamp(20px,8vw,60px)!important;box-sizing:border-box!important}
+  #invitation .gold-name-group{width:min(100%,560px)!important}
+  #invitation .gold-name-group > .royal-name{font-size:clamp(23px,8vw,40px)!important}
+}
+@media (max-width:390px){
+  #invitation .invitation-scroll{padding-left:18px!important;padding-right:18px!important}
+  #invitation .gold-name-group > .royal-name{font-size:clamp(22px,8.2vw,34px)!important;letter-spacing:.015em!important}
+}
+
+/* v28.1 — make uploaded customer artwork the actual template background. */
+.first-page-art{background-image:var(--welcome-bg)!important}
+#invitation .invitation-fixed-bg{background-image:var(--invitation-bg)!important}
+
+/* v5 — FINAL NAME SAFETY: always stack customer names on the invitation.
+   This intentionally overrides every earlier desktop/mobile rule so long names
+   can never be pushed outside the viewport. */
+#invitation .gold-names{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  max-width:100%!important;
+  gap:0!important;
+  padding:0!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  box-sizing:border-box!important;
+}
+#invitation .gold-name-group{
+  display:block!important;
+  width:100%!important;
+  max-width:520px!important;
+  min-width:0!important;
+  margin:0 auto!important;
+  padding:0!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .gold-name-group > .royal-name{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  margin:0 auto!important;
+  padding:0!important;
+  white-space:normal!important;
+  overflow-wrap:break-word!important;
+  word-break:normal!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+  font-size:clamp(24px,4vw,46px)!important;
+  line-height:1.02!important;
+}
+#invitation .gold-name-group > small{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  margin:5px auto 0!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .gold-names > i{
+  display:block!important;
+  width:100%!important;
+  align-self:center!important;
+  flex:none!important;
+  margin:12px 0!important;
+  padding:0!important;
+  text-align:center!important;
+  line-height:1!important;
+}
+
+/* Closing couple names use the same safe stacked treatment. */
+#invitation .final-names{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  max-width:520px!important;
+  min-width:0!important;
+  margin:18px auto!important;
+  padding:0 12px!important;
+  gap:8px!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .final-names .royal-inline-name{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  white-space:normal!important;
+  overflow-wrap:break-word!important;
+  word-break:normal!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .final-names > span:nth-child(2){
+  display:block!important;
+  width:100%!important;
+  text-align:center!important;
+  line-height:1!important;
+}
+
+@media (max-width:700px){
+  #invitation .gold-name-group > .royal-name{font-size:clamp(23px,8vw,40px)!important}
+  #invitation .final-names{padding-inline:8px!important}
+}
+@media (max-width:390px){
+  #invitation .gold-name-group > .royal-name{font-size:clamp(21px,8vw,33px)!important}
+
+/* v6 — intelligent couple-name fitting.
+   Default is the safest stacked composition. JavaScript enables the side-by-side
+   composition only when the actual rendered names fit inside the available width. */
+.welcome h1,
+#invitation .gold-names{
+  box-sizing:border-box!important;
+}
+
+/* Safe default: never crop or push names outside the viewport. */
+.welcome h1{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:min(94vw,1180px)!important;
+  max-width:94vw!important;
+  gap:4px!important;
+  text-align:center!important;
+}
+.welcome h1 span,
+.welcome h1 span:first-child,
+.welcome h1 span:last-child{
+  display:block!important;
+  width:auto!important;
+  max-width:100%!important;
+  min-width:0!important;
+  text-align:center!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  box-sizing:border-box!important;
+}
+.welcome h1 em{
+  display:block!important;
+  width:100%!important;
+  margin:4px 0!important;
+  text-align:center!important;
+  flex:none!important;
+}
+
+/* Only enabled by script after a real fit test. */
+.welcome h1.names-side-by-side{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  align-items:baseline!important;
+  justify-items:stretch!important;
+  column-gap:clamp(12px,2.2vw,34px)!important;
+  row-gap:0!important;
+}
+.welcome h1.names-side-by-side span{
+  width:100%!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  overflow-wrap:normal!important;
+}
+.welcome h1.names-side-by-side span:first-child{text-align:right!important}
+.welcome h1.names-side-by-side span:last-child{text-align:left!important}
+.welcome h1.names-side-by-side em{
+  width:auto!important;
+  margin:0!important;
+}
+
+#invitation .gold-names{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  max-width:100%!important;
+  gap:0!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+}
+#invitation .gold-name-group,
+#invitation .gold-name-group:first-child,
+#invitation .gold-name-group:last-child{
+  width:auto!important;
+  max-width:100%!important;
+  min-width:0!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .gold-name-group > .royal-name{
+  display:block!important;
+  width:auto!important;
+  max-width:100%!important;
+  min-width:0!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .gold-name-group > small{
+  display:block!important;
+  width:auto!important;
+  max-width:100%!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  text-align:center!important;
+}
+#invitation .gold-names > i{
+  display:block!important;
+  width:100%!important;
+  align-self:center!important;
+  text-align:center!important;
+  flex:none!important;
+}
+
+#invitation .gold-names.names-side-by-side{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  align-items:start!important;
+  justify-items:stretch!important;
+  column-gap:clamp(14px,2vw,28px)!important;
+  row-gap:0!important;
+}
+#invitation .gold-names.names-side-by-side .gold-name-group{
+  width:100%!important;
+}
+#invitation .gold-names.names-side-by-side .gold-name-group:first-child{text-align:right!important}
+#invitation .gold-names.names-side-by-side .gold-name-group:last-child{text-align:left!important}
+#invitation .gold-names.names-side-by-side .royal-name{
+  width:100%!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  overflow-wrap:normal!important;
+}
+#invitation .gold-names.names-side-by-side .gold-name-group:first-child .royal-name,
+#invitation .gold-names.names-side-by-side .gold-name-group:first-child small{text-align:right!important}
+#invitation .gold-names.names-side-by-side .gold-name-group:last-child .royal-name,
+#invitation .gold-names.names-side-by-side .gold-name-group:last-child small{text-align:left!important}
+#invitation .gold-names.names-side-by-side > i{
+  width:auto!important;
+  margin:4px 0 0!important;
+}
+
+/* The closing signature is always safe and centered. */
+#invitation .final-names{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  max-width:520px!important;
+  min-width:0!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  gap:8px!important;
+  white-space:normal!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .final-names .royal-inline-name{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#invitation .final-names > span:nth-child(2){
+  width:100%!important;
+  text-align:center!important;
+}
+
+#invitation footer{
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+  padding-inline:16px!important;
+  text-align:center!important;
+  overflow-wrap:anywhere!important;
+}
+
+@media(max-width:700px){
+  .welcome h1{width:94vw!important;max-width:94vw!important}
+  #invitation .gold-name-group > .royal-name{font-size:clamp(23px,8vw,40px)!important}
+  #invitation .gold-name-group > small{font-size:clamp(9px,2.9vw,11px)!important}
+}
+@media(max-width:390px){
+  .welcome h1{width:94vw!important;max-width:94vw!important}
+  #invitation .gold-name-group > .royal-name{font-size:clamp(21px,7.8vw,33px)!important}
+}

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090a">
+<meta name="description" content="A cinematic wedding invitation.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://db.onlinewebfonts.com/c/5e9eaee95191afda4bc74bb11013968c?family=Roman+Caps">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="preloader" class="preloader" aria-label="Preparing wedding invitation">
+  <div class="preload-stars"></div>
+  <div class="preload-arch" aria-hidden="true"><span></span></div>
+  <div class="preload-monogram"><span data-wedding="groomInitial">G</span><i>&amp;</i><span data-wedding="brideInitial">B</span></div>
+  <div class="preload-kicker">A WEDDING INVITATION</div>
+  <div class="preload-line"><span></span></div>
+  <div class="preload-status">PREPARING YOUR EXPERIENCE</div>
+</div>
+
+<!-- FIRST PAGE: the supplied green architectural artwork is the fixed stage for the lantern reveal. -->
+<section id="welcome" class="welcome" aria-label="Wedding invitation opening">
+  <div class="first-page-art" aria-hidden="true"></div>
+  <div class="first-page-shade" aria-hidden="true"></div>
+  <div class="green-glow" aria-hidden="true"></div>
+  <div class="golden-dust" aria-hidden="true"></div>
+
+  <div class="welcome-copy">
+    <div class="pull-prompt"><span>Pull Down the Lantern to Open the Invitation</span><i>↓</i></div>
+    <div class="eyebrow">WEDDING INVITATION</div>
+    <div class="welcome-rule"><span></span><b>✦</b><span></span></div>
+    <h1><span data-wedding="groomName">Groom Name</span><em>&amp;</em><span data-wedding="brideName">Bride Name</span></h1>
+    <div class="welcome-date" data-wedding="welcomeDate"></div>
+    <div class="nikah-countdown-label">COUNTDOWN TO NIKAAH</div>
+    <div class="first-countdown"><div><strong id="fdays">00</strong><small>DAYS</small></div><b>:</b><div><strong id="fhours">00</strong><small>HOURS</small></div><b>:</b><div><strong id="fminutes">00</strong><small>MINUTES</small></div><b>:</b><div><strong id="fseconds">00</strong><small>SECONDS</small></div></div>
+    <p class="first-note">After Namaz-e-Asar · Jama Masjid · Aurangabad</p>
+  </div>
+
+  <div id="lanternRig" class="lantern-rig" aria-label="Pull the lantern down to open the invitation" tabindex="0">
+    <div class="ceiling-mount"><span></span></div>
+    <div class="hanger" id="hanger">
+      <div class="rope" id="rope"></div>
+      <div class="lantern-hit" id="lanternHit">
+        <div class="lantern-float" id="lanternFloat">
+          <div class="lantern-glow"></div>
+          <img class="lantern-svg" src="assets/realistic-lantern.svg" alt="Golden lantern" draggable="false">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="openingLoader" class="opening-loader" aria-hidden="true">
+    <div class="opening-veil"></div>
+    <div class="opening-arch">
+      <span class="arch-line arch-line-1"></span><span class="arch-line arch-line-2"></span>
+      <span class="arch-glow"></span>
+      <div class="opening-monogram"><span data-wedding="groomInitial">G</span><b>&amp;</b><span data-wedding="brideInitial">B</span></div>
+      <div class="opening-title">THE INVITATION</div>
+      <div class="opening-progress"><span></span></div>
+      <div class="opening-percent" id="openingPercent">0</div>
+    </div>
+    <div class="opening-status">UNVEILING YOUR STORY</div>
+  </div>
+</section>
+
+<!-- MAIN INVITATION: the supplied artwork stays fixed; only the central plane content scrolls. -->
+<main id="invitation" aria-label="Wedding invitation details">
+  <div class="invitation-fixed-bg" aria-hidden="true"></div>
+  <div class="invitation-tint" aria-hidden="true"></div>
+  <div class="invitation-plane-top" aria-hidden="true"></div><div class="invitation-plane-bottom" aria-hidden="true"></div>
+  <div class="scroll-hint-arrows" id="scrollHintArrows" aria-hidden="true">
+    <span class="scroll-arrow scroll-arrow-left">
+      <i></i><i></i><i></i>
+    </span>
+    <span class="scroll-arrow scroll-arrow-right">
+      <i></i><i></i><i></i>
+    </span>
+  </div>
+  <div class="invitation-scroll">
+    <section class="intro-section">
+      <div class="intro-inner reveal">
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+        <div class="arabic-rule">❧</div>
+        <div class="mini-label">IN THE NAME OF ALLAH, THE MOST GRACIOUS, THE MOST MERCIFUL</div>
+        <p class="blessing">With the blessings of Allah</p>
+        <p class="invite-line">You are cordially invited to celebrate the wedding of</p>
+        <div class="gold-names">
+          <div class="gold-name-group"><span class="royal-name" data-wedding="groomName">Groom Name</span><small data-wedding="groomFather"></small></div>
+          <i>&amp;</i>
+          <div class="gold-name-group"><span class="royal-name" data-wedding="brideName">Bride Name</span><small data-wedding="brideFather"></small></div>
+        </div>
+        <div class="date-line" data-wedding="mainDate"></div>
+      </div>
+    </section>
+
+    <section class="main-couple-section">
+      <div class="main-couple-inner reveal">
+        <div class="section-label">TOGETHER WITH LOVE</div>
+        <img src="assets/bride-groom.png" class="main-couple" alt="Bride and groom" draggable="false">
+        
+      </div>
+    </section>
+
+    <section class="couple-section"><div class="section-content reveal"><div class="section-label">OUR BEGINNING</div><h2>Two souls, one beginning</h2><p>A beautiful new chapter, by the grace and blessings of Allah.</p></div></section>
+
+    <section class="events"><div class="events-inner">
+      <div class="section-label reveal">THE WEDDING</div><h2 class="section-title reveal">A sacred beginning</h2>
+      <article class="event-card reveal" data-tilt><div class="glass-edge"></div><div class="card-shine"></div><img class="venue-photo" src="assets/nikah-venue.jpg" alt="Nikaah venue"><div class="card-content">
+        <span class="card-label">NIKAAH</span><div class="event-date"><span data-wedding="nikahDay"></span> <small><span data-wedding="nikahMonth"></span><br><span data-wedding="nikahYear"></span></small></div>
+        <div class="event-row"><label>TIME</label><div data-wedding="nikahTime"></div></div>
+        <div class="event-row"><label>VENUE</label><div><strong data-wedding="nikahVenue"></strong><small data-wedding="nikahAddress"></small></div></div><a class="gold-btn venue-map-btn" href="#" target="_blank" rel="noopener">OPEN JAMAA MASJID LOCATION <span>↗</span></a>
+      </div></article>
+      <div class="section-label reveal walima-label">THE CELEBRATION</div><h2 class="section-title reveal">An evening of joy</h2>
+      <article class="event-card reveal" data-tilt><div class="glass-edge"></div><div class="card-shine"></div><img class="venue-photo" src="assets/walima-venue.jpg" alt="Walima venue"><div class="card-content">
+        <span class="card-label">WALIMA</span><div class="event-date"><span data-wedding="walimaDay"></span> <small><span data-wedding="walimaMonth"></span><br><span data-wedding="walimaYear"></span></small></div>
+        <div class="event-row"><label>TIME</label><div data-wedding="walimaTime"></div></div>
+        <div class="event-row"><label>VENUE</label><div><strong data-wedding="walimaVenue"></strong><small data-wedding="walimaAddress"></small></div></div>
+        <a class="gold-btn" href="#" target="_blank" rel="noopener">OPEN WALIMA LOCATION <span>↗</span></a>
+      </div></article>
+    </div></section>
+
+    <section class="countdown-section"><div class="countdown-box reveal"><div class="section-label">UNTIL OUR NIKAAH</div><div class="countdown"><div><b id="days">00</b><span>DAYS</span></div><div><b id="hours">00</b><span>HOURS</span></div><div><b id="minutes">00</b><span>MINUTES</span></div><div><b id="seconds">00</b><span>SECONDS</span></div></div><p><span data-wedding="countdownDateLabel"></span> · <span data-wedding="countdownTime"></span></p></div></section>
+
+    <section class="closing-section"><div class="closing-card reveal">
+  <div class="section-label">WITH LOVE &amp; PRAYERS</div>
+  <div class="gratitude-closing">
+    <div class="gratitude-title">WITH HEARTS FULL OF GRATITUDE</div>
+    <p class="gratitude-copy">we invite you to grace this blessed occasion with your presence and prayers.</p>
+    <p class="gratitude-copy">Your presence will make our joy complete<br>as we begin this beautiful journey together.</p>
+    <div class="gratitude-star">✦</div>
+    <div class="warm-regards">With warm regards</div>
+    <div class="family-invitation" data-wedding="familyInvitation"></div>
+  </div>
+  <div class="final-names"><span class="royal-inline-name" data-wedding="groomShort"></span> <span>&amp;</span> <span class="royal-inline-name" data-wedding="brideShort"></span></div>
+  <div class="contact-card reveal">
+    <div class="contact-ornament">✦</div>
+    <div class="contact-label">FOR ANY ASSISTANCE</div>
+    <div class="contact-title">Contact the Family</div>
+    <a class="contact-call" href="#" aria-label="Get in touch with the family">GET IN TOUCH <span>↗</span></a>
+    <div class="contact-note">We would be delighted to assist you.</div>
+  </div>
+  <div class="closing-actions"><button id="calendar" class="gold-btn" type="button">ADD NIKAAH TO CALENDAR <span>＋</span></button><a class="outline-btn" href="#" target="_blank" rel="noopener">OPEN WALIMA MAP <span>↗</span></a></div>
+</div></section>
+    <footer>With love · <span class="royal-footer-name" data-wedding="groomName"></span> &amp; <span class="royal-footer-name" data-wedding="brideName"></span> · <span data-wedding="footerYear"></span></footer>
+  </div>
+</main>
+<audio id="backgroundMusic" src="assets/Backgroundmusic.mp3" preload="auto" loop></audio>
+<button id="musicToggle" class="music-toggle" type="button" aria-label="Mute background music" aria-pressed="false"><span class="music-icon">♪</span><span class="music-label">MUSIC ON</span></button>
+<div id="toast" class="toast" role="status"></div>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 620">
+<defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff1b0"/><stop offset=".12" stop-color="#d9a948"/>
+    <stop offset=".32" stop-color="#704512"/><stop offset=".5" stop-color="#f3ce72"/>
+    <stop offset=".72" stop-color="#8c5a18"/><stop offset=".9" stop-color="#edc66a"/><stop offset="1" stop-color="#5a370e"/>
+  </linearGradient>
+  <linearGradient id="darkGold" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#4d2e0b"/><stop offset=".25" stop-color="#d6a642"/>
+    <stop offset=".5" stop-color="#fff0a5"/><stop offset=".75" stop-color="#a96f20"/><stop offset="1" stop-color="#432708"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#1c160b" stop-opacity=".94"/>
+    <stop offset=".18" stop-color="#f4c85d" stop-opacity=".22"/>
+    <stop offset=".5" stop-color="#ffe9a0" stop-opacity=".5"/>
+    <stop offset=".82" stop-color="#d89426" stop-opacity=".18"/>
+    <stop offset="1" stop-color="#100d07" stop-opacity=".96"/>
+  </linearGradient>
+  <radialGradient id="fire" cx=".5" cy=".46" r=".58">
+    <stop offset="0" stop-color="#fff8c7"/><stop offset=".16" stop-color="#ffe99a" stop-opacity=".98"/>
+    <stop offset=".42" stop-color="#f6b93e" stop-opacity=".62"/><stop offset="1" stop-color="#a76512" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="16"/></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+  <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#000" flood-opacity=".72"/></filter>
+  <clipPath id="body"><path d="M116 194 Q210 158 304 194 L286 425 Q210 476 134 425Z"/></clipPath>
+</defs>
+
+<!-- warm internal light -->
+<ellipse cx="210" cy="315" rx="125" ry="160" fill="#e7a632" opacity=".26" filter="url(#glow)"/>
+<ellipse cx="210" cy="310" rx="105" ry="145" fill="url(#fire)" opacity=".82" filter="url(#soft)"/>
+
+<g filter="url(#shadow)">
+  <!-- finial and suspension -->
+  <path d="M210 12 L228 40 L210 57 L192 40Z" fill="url(#gold)" stroke="#5a390f" stroke-width="3"/>
+  <rect x="193" y="48" width="34" height="30" rx="8" fill="url(#gold)" stroke="#5b390f" stroke-width="3"/>
+  <path d="M174 78 Q210 62 246 78 L258 108 Q210 129 162 108Z" fill="url(#darkGold)" stroke="#5c3b12" stroke-width="4"/>
+  <path d="M170 93 Q210 110 250 93" fill="none" stroke="#ffe69a" stroke-opacity=".55" stroke-width="3"/>
+
+  <!-- top crown -->
+  <path d="M145 112 L275 112 L302 190 Q210 222 118 190Z" fill="url(#darkGold)" stroke="#59390f" stroke-width="4"/>
+  <path d="M151 124 Q210 146 269 124" fill="none" stroke="#fff0a6" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M132 169 Q210 198 288 169" fill="none" stroke="#5b3a12" stroke-width="5"/>
+
+  <!-- glass body -->
+  <path d="M116 194 Q210 158 304 194 L286 425 Q210 476 134 425Z" fill="url(#glass)" stroke="#4c300d" stroke-width="7"/>
+  <g clip-path="url(#body)">
+    <ellipse cx="210" cy="300" rx="86" ry="130" fill="url(#fire)" opacity=".95"/>
+    <path d="M125 204 Q210 238 295 204" fill="none" stroke="#fff0a0" stroke-opacity=".2" stroke-width="7"/>
+    <path d="M155 180 L165 445 M205 170 L210 462 M265 180 L255 445" stroke="#ffe18a" stroke-opacity=".12" stroke-width="3"/>
+  </g>
+
+  <!-- vertical metal ribs -->
+  <g fill="none" stroke="url(#gold)" stroke-width="8" stroke-linecap="round">
+    <path d="M116 194 Q126 310 134 425"/>
+    <path d="M151 180 Q159 308 164 448"/>
+    <path d="M210 168 L210 463"/>
+    <path d="M269 180 Q261 308 256 448"/>
+    <path d="M304 194 Q294 310 286 425"/>
+  </g>
+  <g fill="none" stroke="#fff0a2" stroke-opacity=".4" stroke-width="2">
+    <path d="M122 199 Q132 315 139 421"/>
+    <path d="M158 183 Q166 310 170 442"/>
+    <path d="M216 171 L216 457"/>
+  </g>
+
+  <!-- lower frame -->
+  <path d="M134 425 Q210 458 286 425 L306 458 Q210 501 114 458Z" fill="url(#darkGold)" stroke="#55350d" stroke-width="4"/>
+  <path d="M126 448 Q210 481 294 448" fill="none" stroke="#ffe69a" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M155 482 Q210 502 265 482 L250 520 Q210 537 170 520Z" fill="url(#gold)" stroke="#54340d" stroke-width="4"/>
+
+  <!-- bottom finial -->
+  <path d="M190 520 L230 520 L241 550 L210 577 L179 550Z" fill="url(#darkGold)" stroke="#51310d" stroke-width="4"/>
+  <circle cx="210" cy="584" r="15" fill="url(#gold)" stroke="#51310d" stroke-width="3"/>
+  <path d="M199 584 Q210 595 221 584" fill="none" stroke="#fff0a1" stroke-opacity=".6" stroke-width="2"/>
+</g>
+</svg>
